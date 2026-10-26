@@ -32,8 +32,11 @@ here.
 ## Status
 
 Each rebuilt function arrives here once it passes its checks against
-the original program. Until the first one does, this repository holds
-only this page and its license.
+the original program. The first 304 arrived on 26 October 2026: 234
+from the game, 69 from the menus and 1 from the launcher, each in its
+own file under `src/`, named by its address. 21 of them have plain
+names so far; the rest still carry the decompiler's stand-in names,
+`FUN_` and the address, until a later pass names them.
 
 ## The legal side
 
