@@ -2,24 +2,32 @@
 
 An AI-ready decompile of MechWarrior 2: Mercenaries (1996).
 
-A decompile is source code rebuilt from a program that was only ever
-shipped compiled, the form a computer runs and a person cannot read.
-This repository holds one for the Windows 95 version of MechWarrior 2:
-Mercenaries, the giant robot combat game Activision released in 1996.
-It is rebuilt from the 3 program files on its CD: `MERCSWIN.EXE`, the
-launcher, `MW2SHELL.DLL`, the menus, and `MERCSW.DLL`, the game itself.
-AI-ready means the code is written to be read. Each function, one small
-piece of the program, and each variable gets a plain name chosen by
-reading what it does, so a person or an AI model working in the code
-can follow it.
+This repository is the decompile of the Windows 95 version of
+MechWarrior 2: Mercenaries, the giant robot combat game Activision
+released in 1996. It is rebuilt from the 3 program files on its CD:
+`MERCSWIN.EXE` (the launcher), `MW2SHELL.DLL` (the menus) and
+`MERCSW.DLL` (the game itself). AI-ready means the code is written to
+be read by AI. Each function, one small piece of the program, and each
+variable gets a plain name chosen by reading what it does, so a person
+or an AI model working in the code can follow it.
 
 ## Why another decompile?
 
-This one changes nothing. It has no improvements, no new features and
+This repo changes nothing. It has no improvements, no new features and
 no bug fixes: each function does what the original does, bugs included.
 That makes it a fixed starting point for other work, such as a port to
 a new system, a mod, a study of how the game works, or a check on
 someone else's rebuild.
+
+It is also built for AI models to work in. The names say what each
+piece does, so a model helping with one of those projects can read and
+change the code without first having to work out what it means.
+
+The MIT license suits a base like this. It lets anyone reuse the code
+on one condition: keep its copyright and license notice. A companion
+project, such as a port or a mod, can carry this code inside its own
+work, under its own license, and take each new function as it arrives
+here.
 
 ## Status
 
@@ -41,7 +49,6 @@ covers only what is written in this repository. It grants no rights in
 the game itself: its story, art, sound, music, names and trademarks.
 
 - **You need the original CD.** No game files are included: no art,
-  sound, missions or programs. The rebuild is checked against the
-  Windows 95 CD's own files.
+  sound, missions or programs.
 - **It is provided as is,** with no warranty of any kind, as the MIT
   license says.
