@@ -32,13 +32,14 @@ here.
 ## Status
 
 Each rebuilt function arrives here once it passes its checks against
-the original program. The first 304 arrived on 26 October 2026, and
-362 more on 27 October: 666 in all, 510 from the game, 151 from the
-menus and 5 from the launcher. Each is in its own file under `src/`,
-named by its address, with a short record under `provenance/` of which
-checks it passed and which tools made it. 54 of them have plain names
-so far; the rest still carry the decompiler's stand-in names, `FUN_`
-and the address, until a later pass names them.
+the original program. The first 304 arrived on 26 October 2026, 362
+more on 27 October, and 1,179 more on 28 October: 1,845 in all, 1,328
+from the game, 510 from the menus and 7 from the launcher. Each is in
+its own file under `src/`, named by its address, with a short record
+under `provenance/` of which checks it passed and which tools made it.
+55 of them have plain names so far; the rest still carry the
+decompiler's stand-in names, `FUN_` and the address, until a later pass
+names them.
 
 ## The legal side
 
