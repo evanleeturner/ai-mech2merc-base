@@ -1,0 +1,47 @@
+{
+  "behavior_equivalence": {
+    "assurance": "inspection",
+    "method": "compile_only",
+    "unverified_residue": [
+      "behavior under execution: no side-by-side verdict",
+      "no review: Ghidra's C repaired by fixed rules, read by no model or reader"
+    ],
+    "verdict": "preserved"
+  },
+  "builds": null,
+  "created_at": "2026-10-27T18:26:07-05:00",
+  "evidence": {
+    "decompiler": {
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  "file_sha256": "bec6d99b003b33de7d403b8cbaf75f25da42ba0c425851554665ba96fb105532",
+  "gates": {
+    "compiles": {
+      "verdict": "passed"
+    },
+    "side_by_side": {
+      "verdict": "not_run"
+    },
+    "stack_balances": {
+      "verdict": "passed"
+    }
+  },
+  "inputs": null,
+  "label_version": 1,
+  "machine": null,
+  "provenance": {
+    "agent": "route A: Ghidra's C repaired by fixed rules, no model"
+  },
+  "touched_surface": {
+    "address": "1002fcb3",
+    "source_sha256": "77b845eea00957e8d69509e5a2637715fbaafaf9810bfc9ce6a401b27e6c6fe6",
+    "target": "mercsw"
+  },
+  "verification": {
+    "caveats": [
+      "a clean compile is necessary, never sufficient"
+    ]
+  }
+}
