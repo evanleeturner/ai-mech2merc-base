@@ -1,0 +1,46 @@
+{
+  "behavior_equivalence": {
+    "assurance": "inspection",
+    "method": "attested_by_inspection",
+    "unverified_residue": [
+      "behavior under execution: no side-by-side verdict"
+    ],
+    "verdict": "preserved"
+  },
+  "builds": null,
+  "created_at": "2026-10-29T15:21:04-05:00",
+  "evidence": {
+    "decompiler": {
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  "file_sha256": "2922a81446575c51acbb0d63279e4b88eebca55b7685f7a384988cde75d0b148",
+  "gates": {
+    "compiles": {
+      "verdict": "passed"
+    },
+    "side_by_side": {
+      "verdict": "not_judged"
+    },
+    "stack_balances": {
+      "verdict": "passed"
+    }
+  },
+  "inputs": null,
+  "label_version": 1,
+  "machine": null,
+  "provenance": {
+    "agent": "ReAgent"
+  },
+  "touched_surface": {
+    "address": "1001608d",
+    "source_sha256": "9f5cde2589ff3ac8705d6dab1041658330445f4b5f3b07723654fabd93cba8ed",
+    "target": "mercsw"
+  },
+  "verification": {
+    "caveats": [
+      "a clean compile is necessary, never sufficient"
+    ]
+  }
+}

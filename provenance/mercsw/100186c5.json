@@ -1,0 +1,47 @@
+{
+  "behavior_equivalence": {
+    "assurance": "inspection",
+    "method": "attested_by_inspection",
+    "unverified_residue": [
+      "behavior under execution: no side-by-side verdict",
+      "stack balance: the stack gate could not judge the whole function"
+    ],
+    "verdict": "preserved"
+  },
+  "builds": null,
+  "created_at": "2026-10-29T01:23:11-05:00",
+  "evidence": {
+    "decompiler": {
+      "name": "Ghidra",
+      "version": "12.1.4"
+    }
+  },
+  "file_sha256": "9894b94ee245a95844d89db0a302f431b5de8bb78e3efb6f237152731a2e7d75",
+  "gates": {
+    "compiles": {
+      "verdict": "passed"
+    },
+    "side_by_side": {
+      "verdict": "not_judged"
+    },
+    "stack_balances": {
+      "verdict": "passed"
+    }
+  },
+  "inputs": null,
+  "label_version": 1,
+  "machine": null,
+  "provenance": {
+    "agent": "ReAgent"
+  },
+  "touched_surface": {
+    "address": "100186c5",
+    "source_sha256": "6462a38e15d93cdf0437f3720be69909b8854288a945aaa8138cc1c091cc7aca",
+    "target": "mercsw"
+  },
+  "verification": {
+    "caveats": [
+      "a clean compile is necessary, never sufficient"
+    ]
+  }
+}

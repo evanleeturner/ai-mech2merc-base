@@ -5,7 +5,7 @@ extern int DAT_100a5538;
 
 void __stdcall _AIL_end_sample_4(unsigned int a);
 
-void __cdecl FUN_1000389e(int param_1)
+void __cdecl StopAllSamples(int param_1)
 {
     int local_8;
 

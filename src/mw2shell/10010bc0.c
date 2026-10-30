@@ -9,7 +9,7 @@ undefined4 __stdcall _AIL_init_sample_4(undefined4);
 undefined4 __stdcall _AIL_set_sample_file_12(undefined4, undefined4, undefined4);
 undefined __thiscall FUN_10010890(void * this, undefined4 param_1);
 
-int * __thiscall FUN_10010bc0(void * this, char * param_1, int param_2, int param_3)
+int * __thiscall ConstructSampleFromFileImage_Likely(void * this, char * param_1, int param_2, int param_3)
 
 {
   int iVar1;

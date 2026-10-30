@@ -2,7 +2,7 @@
 /* mw2shell 10063ee0 */
 /* mw2shell 10063ee0: Ghidra's C, repaired by tools/ghidra_repair.py */
 
-void __cdecl FUN_10063ee0(int * param_1)
+void __cdecl ClearAllEntryFlags(int * param_1)
 
 {
   int *piVar1;

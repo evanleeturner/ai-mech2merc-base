@@ -13,7 +13,7 @@ FILE * __cdecl FID_conflict___wfopen(char * _Filename, char * _Mode);
 size_t __cdecl _fread(void * _DstBuf, size_t _ElementSize, size_t _Count, FILE * _File);
 int __cdecl _fclose(FILE * _File);
 
-undefined4 __cdecl FUN_10057530(short param_1, short param_2)
+undefined4 __cdecl LoadLogoCelIntoBuffer_Likely(short param_1, short param_2)
 
 {
   ushort *_DstBuf;

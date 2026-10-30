@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: MIT */
 /* mercsw 10072715 */
-int __cdecl ScaleBy150Or75Percent(int param_1, int param_2)
+int __cdecl ScaleBy150Or75Percent_Likely(int param_1, int param_2)
 {
     int result;
 

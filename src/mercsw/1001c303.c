@@ -3,7 +3,7 @@
 extern void *DAT_100adf74;
 
 void * __stdcall HeapAlloc(void *, DWORD, DWORD);
-void __cdecl FUN_1001c299(int param_1, int param_2);
+void __cdecl SetCurrentNode(int param_1, int param_2);
 
 int * __cdecl FUN_1001c303(int param_1, int param_2, int param_3, int param_4, int param_5, unsigned int *param_6)
 {
@@ -39,7 +39,7 @@ int * __cdecl FUN_1001c303(int param_1, int param_2, int param_3, int param_4, i
             *(unsigned short *)(piVar1 + 5) = 0;
             piVar1[2] = (int)(((unsigned int)param_3 * 0x44u + 0x18u) & 0xffffu);
             *param_6 = (unsigned int)((int)piVar1 + (int)((unsigned int)param_4 * 0x24u) + piVar1[2]);
-            FUN_1001c299(param_1, (int)piVar1);
+            SetCurrentNode(param_1, (int)piVar1);
             if (*(int *)(param_1 + 0x1c) == 0) {
                 *(int **)(param_1 + 0x1c) = piVar1;
                 piVar1[3] = 0;

@@ -6,7 +6,7 @@ extern int DAT_10160ec4;
 extern int DAT_10160eb4;
 
 /* Parameter and return types of the two callees are inferred from the call sites only. */
-unsigned int __cdecl ScaledDiffShift(int a, int b, int c, unsigned char d);
+unsigned int __cdecl ScaledDiffShift_Likely(int a, int b, int c, unsigned char d);
 int __cdecl FUN_10055b90(int a, int b, int c, int d, int e);
 
 int __cdecl FUN_1005558c(int param_1, int param_2, unsigned int param_3, int param_4, int param_5, int param_6)
@@ -24,10 +24,10 @@ int __cdecl FUN_1005558c(int param_1, int param_2, unsigned int param_3, int par
         param_5 = param_6;
     }
     if (param_4 == 0) {
-        param_3 = ScaledDiffShift(DAT_10160ee8, (int)param_3, local_8, (unsigned char)DAT_10160eb8);
+        param_3 = ScaledDiffShift_Likely(DAT_10160ee8, (int)param_3, local_8, (unsigned char)DAT_10160eb8);
     }
     else {
-        param_3 = ScaledDiffShift((int)param_3, DAT_10160ec4, local_8, (unsigned char)DAT_10160eb4);
+        param_3 = ScaledDiffShift_Likely((int)param_3, DAT_10160ec4, local_8, (unsigned char)DAT_10160eb4);
     }
     if (param_3 - (unsigned int)local_14 == 0) {
         local_10 = param_5;

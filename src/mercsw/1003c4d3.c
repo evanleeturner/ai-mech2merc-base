@@ -12,7 +12,7 @@ undefined __cdecl FUN_1008664f(uint param_1, int * param_2);
 ushort * __cdecl FUN_1008668b(int param_1, uint param_2, int * param_3);
 undefined4 __stdcall _AIL_allocate_sequence_handle_4(undefined4);
 undefined4 __stdcall _AIL_init_sequence_12(undefined4, undefined4, undefined4);
-int __cdecl FUN_10003d60(int param_1, int param_2);
+int __cdecl FixedMul16(int param_1, int param_2);
 undefined4 __stdcall _AIL_set_sequence_volume_12(undefined4, undefined4, undefined4);
 undefined4 __stdcall _AIL_start_sequence_4(undefined4);
 
@@ -66,7 +66,7 @@ undefined4 __cdecl FUN_1003c4d3(int param_1, short param_2, short param_3)
           *(int *)(DAT_10160e90 + local_10 * 4) = iVar2;
           _AIL_init_sequence_12(iVar2,(undefined4)(puVar3),(int)param_3);
           uVar1 = 0;
-          iVar4 = FUN_10003d60(DAT_100b3c54,0x7f);
+          iVar4 = FixedMul16(DAT_100b3c54,0x7f);
           _AIL_set_sequence_volume_12(iVar2,iVar4,uVar1);
           _AIL_start_sequence_4(iVar2);
           uVar1 = 1;

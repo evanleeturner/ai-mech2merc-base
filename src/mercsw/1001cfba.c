@@ -2,7 +2,7 @@
 /* mercsw 1001cfba */
 /* mercsw 1001cfba: Ghidra's C, repaired by tools/ghidra_repair.py */
 int __cdecl FUN_1001b971(int param_1, int param_2, int param_3, int param_4, int param_5, int param_6, int param_7, int param_8, int param_9, int * param_10, int * param_11, int * param_12);
-int __cdecl FUN_1000fc30(int param_1, int param_2, int param_3);
+int __cdecl ApproxLength3_Likely(int param_1, int param_2, int param_3);
 
 void __cdecl FUN_1001cfba(int param_1, int param_2)
 
@@ -51,7 +51,7 @@ void __cdecl FUN_1001cfba(int param_1, int param_2)
       while (local_28 != 0) {
         local_10 = (int *)((uint)*(byte *)(*(int *)(param_1 + 4) + (local_28 - 1) + param_1) * 0x44
                           + param_2);
-        local_8 = FUN_1000fc30(*local_1c - *local_10,local_1c[1] - local_10[1],
+        local_8 = ApproxLength3_Likely(*local_1c - *local_10,local_1c[1] - local_10[1],
                                local_1c[2] - local_10[2]);
         if (local_24 < local_8) {
           local_20 = local_10;

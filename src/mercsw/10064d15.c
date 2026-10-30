@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: MIT */
 /* mercsw 10064d15 */
-int __cdecl IndexBitWidth(unsigned int param_1)
+int __cdecl IndexBitWidth_Likely(unsigned int param_1)
 {
     int bits;
     int wasZero;

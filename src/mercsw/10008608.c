@@ -10,7 +10,7 @@ extern undefined4 DAT_10215658;
 extern undefined4 DAT_10215660;
 extern undefined4 PTR_DAT_100a761c;
 undefined __cdecl FUN_100083d0(int param_1, undefined4 * param_2);
-int * __cdecl FUN_100660e1(int param_1, int * param_2, int * param_3);
+int * __cdecl ScalePointBySize(int param_1, int * param_2, int * param_3);
 
 void __stdcall FUN_10008608(void)
 
@@ -23,7 +23,7 @@ void __stdcall FUN_10008608(void)
   DAT_10215658 = 0;
   DAT_10215660 = 1;
   DAT_10215650 = 0;
-  FUN_100660e1(0x101f52e0,(int *)(PTR_DAT_100a761c + 0x14),(int *)(PTR_DAT_100a761c + 0x14));
+  ScalePointBySize(0x101f52e0,(int *)(PTR_DAT_100a761c + 0x14),(int *)(PTR_DAT_100a761c + 0x14));
   DAT_100a7178 = DAT_100a7178 + -1000;
   DAT_100a7180 = DAT_100a717c - DAT_100a7178;
   return;

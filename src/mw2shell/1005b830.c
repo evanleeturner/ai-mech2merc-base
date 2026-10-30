@@ -9,7 +9,7 @@ UINT __stdcall MapVirtualKeyA(UINT, UINT);
 int __cdecl _tolower(int _C);
 short __stdcall GetKeyState(int);
 
-void __cdecl FUN_1005b830(UINT param_1)
+void __cdecl FUN_1005b830(UINT code)
 
 {
   ushort uVar1;
@@ -17,9 +17,9 @@ void __cdecl FUN_1005b830(UINT param_1)
   int iVar3;
   ushort uVar4;
   
-  uVar4 = *(ushort *)(DAT_100a55d8 + param_1 * 2);
+  uVar4 = *(ushort *)(DAT_100a55d8 + code * 2);
   if (uVar4 == 0) {
-    UVar2 = MapVirtualKeyA(param_1,2);
+    UVar2 = MapVirtualKeyA(code,2);
     iVar3 = _tolower((int)(char)UVar2);
     uVar4 = (ushort)iVar3;
     if (uVar4 == 0) {

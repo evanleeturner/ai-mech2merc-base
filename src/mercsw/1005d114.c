@@ -14,7 +14,7 @@ extern undefined4 DAT_10114da4;
 extern undefined4 DAT_10114db0[];
 extern undefined4 DAT_10114e00;
 extern undefined4 DAT_10114ec8;
-int __cdecl FUN_1000fc30(int param_1, int param_2, int param_3);
+int __cdecl ApproxLength3_Likely(int param_1, int param_2, int param_3);
 undefined __cdecl FUN_10004475(int * param_1);
 undefined __cdecl FUN_10003742(uint param_1, int param_2, undefined4 param_3, int param_4, ushort param_5);
 undefined __cdecl FUN_100082c4(int param_1, int param_2);
@@ -26,7 +26,7 @@ undefined __stdcall FUN_1000a4d6(void);
 undefined __stdcall FUN_1003c807(void);
 undefined __stdcall FUN_1000a86e(void);
 undefined __stdcall FUN_1003c9e2(void);
-undefined __stdcall FUN_1003ca49(void);
+undefined __stdcall MuteMidiChannel(void);
 
 void __cdecl FUN_1005d114(int * param_1)
 
@@ -66,7 +66,7 @@ void __cdecl FUN_1005d114(int * param_1)
       else {
         local_c = local_c + -0x168;
       }
-      iVar3 = FUN_1000fc30(*(int *)(*param_1 + 200) - *(int *)(*param_1 + 0x50),
+      iVar3 = ApproxLength3_Likely(*(int *)(*param_1 + 200) - *(int *)(*param_1 + 0x50),
                            *(int *)(*param_1 + 0xcc) - *(int *)(*param_1 + 0x54),
                            *(int *)(*param_1 + 0xd0) - *(int *)(*param_1 + 0x58));
       if (DAT_100b3214 != 0) {
@@ -119,7 +119,7 @@ void __cdecl FUN_1005d114(int * param_1)
         FUN_1003c9e2();
       }
       if (DAT_100ab094 == 0) {
-        FUN_1003ca49();
+        MuteMidiChannel();
       }
     }
   }

@@ -9,9 +9,9 @@ extern undefined4 DAT_100b0588;
 extern HMENU DAT_100d08ec;
 extern char s__ssmk__s_smk_1008e410[];
 undefined4 __cdecl FUN_1000e8f0(undefined4 param_1, UINT param_2, WPARAM param_3);
-undefined __cdecl FUN_100166c0(HMENU param_1);
+undefined __cdecl GrayMenuCommands_Likely(HMENU param_1);
 
-undefined4 __stdcall FUN_1000f8d0(void)
+undefined4 __stdcall DispatchFirstQueuedEntry_Likely(void)
 
 {
   HMENU pHVar1;
@@ -31,7 +31,7 @@ undefined4 __stdcall FUN_1000f8d0(void)
   FUN_1000e8f0(DAT_1008e3f0[iVar3],DAT_100b0588,DAT_100b0588);
   pHVar1 = DAT_100d08ec;
   DAT_1008e3f0[iVar3] = 0;
-  FUN_100166c0(pHVar1);
+  GrayMenuCommands_Likely(pHVar1);
   DAT_100a6ba4 = 1;
   return 0;
 }

@@ -5,7 +5,7 @@ enum { false = 0, true = 1 };
 extern undefined DAT_100c6aa6[];
 int __cdecl _strncmp(char * _Str1, char * _Str2, size_t _MaxCount);
 
-ushort __cdecl FUN_1005a230(int param_1, char * param_2)
+ushort __cdecl FUN_1005a230(int param_1, char * str2)
 
 {
   ushort uVar1;
@@ -22,7 +22,7 @@ ushort __cdecl FUN_1005a230(int param_1, char * param_2)
   uVar1 = *(ushort *)(iVar2 + 0xc);
   if (uVar1 != 0) {
     do {
-      iVar4 = _strncmp((char *)(iVar2 + 0xe + uVar6 * 0x18),param_2,4);
+      iVar4 = _strncmp((char *)(iVar2 + 0xe + uVar6 * 0x18),str2,4);
       if (iVar4 == 0) {
         bVar3 = true;
       }

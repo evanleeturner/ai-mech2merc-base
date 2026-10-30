@@ -12,8 +12,8 @@ extern int * DAT_100a67c4;
 extern int * DAT_100a67c8;
 undefined __cdecl FUN_100180f0(int * param_1, char param_2);
 LPVOID __stdcall HeapAlloc(HANDLE, DWORD, DWORD);
-undefined4 __cdecl FUN_10017df0(int * param_1, undefined4 param_2);
-undefined __stdcall FUN_1000c990(void);
+undefined4 __cdecl AppendToCollection(int * param_1, undefined4 param_2);
+undefined __stdcall ResetListsAndProcessEntries_Likely(void);
 
 void __cdecl FUN_100098d0(int param_1)
 
@@ -39,7 +39,7 @@ void __cdecl FUN_100098d0(int param_1)
       *(undefined4 *)((int)piVar1 + 10) = 0xffffffff;
       *(undefined4 *)((int)piVar1 + 0xe) = 0xbdf;
       *(undefined4 *)((int)piVar1 + 0x12) = 100;
-      FUN_10017df0(DAT_100a67b4,(undefined4)(piVar1));
+      AppendToCollection(DAT_100a67b4,(undefined4)(piVar1));
     }
     piVar3 = piVar3 + 0x10;
     iVar2 = iVar2 + 1;
@@ -56,7 +56,7 @@ void __cdecl FUN_100098d0(int param_1)
       *(undefined4 *)((int)piVar1 + 0xe) = 1;
       *(undefined4 *)((int)piVar1 + 0x12) = 0xbdf;
       *(undefined4 *)((int)piVar1 + 0x16) = 100;
-      FUN_10017df0(DAT_100a67b8,(undefined4)(piVar1));
+      AppendToCollection(DAT_100a67b8,(undefined4)(piVar1));
     }
     piVar3 = piVar3 + 0x10;
     iVar2 = iVar2 + 1;
@@ -71,8 +71,8 @@ void __cdecl FUN_100098d0(int param_1)
     *(undefined4 *)((int)piVar3 + 10) = 0;
     *(undefined4 *)((int)piVar3 + 0xe) = 0;
     *(undefined4 *)((int)piVar3 + 0x12) = 0;
-    FUN_10017df0(DAT_100a67b4,(undefined4)(piVar3));
+    AppendToCollection(DAT_100a67b4,(undefined4)(piVar3));
   } while (iVar2 < 0xb);
-  FUN_1000c990();
+  ResetListsAndProcessEntries_Likely();
   return;
 }

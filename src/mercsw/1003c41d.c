@@ -8,7 +8,7 @@ extern undefined DAT_10160e80[];
 extern undefined DAT_10160e90[];
 undefined4 __stdcall _AIL_set_preference_8(undefined4, undefined4);
 undefined4 __stdcall FUN_1006af3b(void);
-int __cdecl FUN_10003d60(int param_1, int param_2);
+int __cdecl FixedMul16(int param_1, int param_2);
 undefined __cdecl FUN_1003c756(short param_1);
 
 undefined4 __stdcall FUN_1003c41d(void)
@@ -29,7 +29,7 @@ undefined4 __stdcall FUN_1003c41d(void)
       uVar1 = 0xfffffffb;
     }
     else {
-      iVar2 = FUN_10003d60(DAT_100b3c54,0x7f);
+      iVar2 = FixedMul16(DAT_100b3c54,0x7f);
       FUN_1003c756((short)iVar2);
       DAT_100aefb8 = 1;
       uVar1 = 1;

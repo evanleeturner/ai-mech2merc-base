@@ -2,7 +2,7 @@
 /* mercsw 10067126 */
 /* mercsw 10067126: Ghidra's C, repaired by tools/ghidra_repair.py */
 undefined4 __cdecl FUN_10002570(uint param_1, int param_2);
-int __cdecl FUN_10003d60(int param_1, int param_2);
+int __cdecl FixedMul16(int param_1, int param_2);
 
 int * __cdecl FUN_10067126(int * param_1, undefined4 param_2, int param_3, int * param_4)
 
@@ -27,7 +27,7 @@ int * __cdecl FUN_10067126(int * param_1, undefined4 param_2, int param_3, int *
       local_1c = *param_1 + local_1c;
     }
     else {
-      local_18 = FUN_10003d60(*param_1,param_3);
+      local_18 = FixedMul16(*param_1,param_3);
       local_18 = param_1[1] + local_18;
     }
     break;
@@ -39,7 +39,7 @@ int * __cdecl FUN_10067126(int * param_1, undefined4 param_2, int param_3, int *
     else {
       local_1c = 0;
       local_18 = param_1[1];
-      iVar1 = FUN_10003d60(*param_1,param_3);
+      iVar1 = FixedMul16(*param_1,param_3);
       local_18 = local_18 - iVar1;
     }
     break;
@@ -51,7 +51,7 @@ int * __cdecl FUN_10067126(int * param_1, undefined4 param_2, int param_3, int *
       local_1c = local_1c - iVar1;
     }
     else {
-      local_18 = FUN_10003d60(*param_1,param_3);
+      local_18 = FixedMul16(*param_1,param_3);
       local_18 = param_1[1] + local_18;
     }
     break;
@@ -65,7 +65,7 @@ int * __cdecl FUN_10067126(int * param_1, undefined4 param_2, int param_3, int *
     else {
       local_1c = 0;
       local_18 = param_1[1];
-      iVar1 = FUN_10003d60(*param_1,param_3);
+      iVar1 = FixedMul16(*param_1,param_3);
       local_18 = local_18 - iVar1;
     }
     break;

@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: MIT */
 /* mw2shell 10063f00 */
 /* mw2shell 10063f00: Ghidra's C, repaired by tools/ghidra_repair.py */
-undefined __cdecl FUN_10063ee0(int * param_1);
+undefined __cdecl ClearAllEntryFlags(int * param_1);
 
 void __cdecl FUN_10063f00(int * param_1, int param_2)
 
@@ -9,7 +9,7 @@ void __cdecl FUN_10063f00(int * param_1, int param_2)
   int *piVar1;
   int iVar2;
   
-  FUN_10063ee0(param_1);
+  ClearAllEntryFlags(param_1);
   iVar2 = *param_1;
   while (iVar2 != -1) {
     if (param_1[9] == param_2) {

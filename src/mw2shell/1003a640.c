@@ -12,7 +12,7 @@ extern unsigned int DAT_10094304;
 extern unsigned int DAT_10094308;
 extern unsigned int DAT_1009430c;
 
-void __stdcall FUN_1003a640(void)
+void __stdcall ZeroTenGlobalsSetOneToMinusOne(void)
 {
     DAT_100b6f44 = 0xffffffff;
     DAT_100942e8 = 0;

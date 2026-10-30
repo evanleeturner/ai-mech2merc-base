@@ -9,16 +9,16 @@ extern undefined DAT_101e8db0[];
 extern undefined DAT_101e8db4[];
 extern undefined4 PTR_DAT_100af0a8;
 undefined4 __stdcall _AIL_end_sample_4(undefined4);
-ushort * __cdecl FUN_1008668b(int param_1, uint param_2, int * param_3);
+ushort * __cdecl FUN_1008668b(int param_1, uint mem, int * param_3);
 int __cdecl _strncmp(char * _Str1, char * _Str2, size_t _MaxCount);
 int __stdcall HeapFree(HANDLE, DWORD, LPVOID);
-undefined __cdecl FUN_1008664f(uint param_1, int * param_2);
+undefined __cdecl FUN_1008664f(uint param_1, int * mem);
 undefined4 __stdcall _AIL_init_sample_4(undefined4);
 undefined4 __stdcall _AIL_set_sample_user_data_12(undefined4, undefined4, undefined4);
 undefined4 __stdcall _AIL_register_EOS_callback_8(undefined4, undefined4);
-undefined __stdcall FUN_100033ce(undefined4 param_1);
+undefined __stdcall HandleSampleEnd(undefined4 param_1);
 
-uint __cdecl FUN_10002d8f(uint param_1, LPVOID param_2, ushort param_3, short param_4, int param_5)
+uint __cdecl FUN_10002d8f(uint param_1, LPVOID mem, ushort param_3, short param_4, int param_5)
 
 {
   short *psVar1;
@@ -31,11 +31,11 @@ uint __cdecl FUN_10002d8f(uint param_1, LPVOID param_2, ushort param_3, short pa
   uint local_10;
   uint local_c;
   
-  if (param_2 != (LPVOID)0x0) {
+  if (mem != (LPVOID)0x0) {
     param_1 = 0xffffffff;
   }
   if ((int)param_1 < 1) {
-    if (param_2 == (LPVOID)0x0) {
+    if (mem == (LPVOID)0x0) {
       return 0xfffffffa;
     }
   }
@@ -96,7 +96,7 @@ LAB_10002fb1:
       *(undefined4 *)(DAT_100a40f8 + 0x48 + local_c * 4) = 0;
     }
   }
-  if (param_2 == (LPVOID)0x0) {
+  if (mem == (LPVOID)0x0) {
     puVar5 = FUN_1008668b(0,param_1,(int *)PTR_DAT_100af0a8);
     *(ushort **)(DAT_100a40f8 + 0x368 + local_14 * 4) = puVar5;
     if (*(int *)(DAT_100a40f8 + 0x368 + local_14 * 4) == 0) {
@@ -104,7 +104,7 @@ LAB_10002fb1:
     }
   }
   else {
-    *(LPVOID *)(DAT_100a40f8 + 0x368 + local_14 * 4) = param_2;
+    *(LPVOID *)(DAT_100a40f8 + 0x368 + local_14 * 4) = mem;
   }
   puVar3 = *(undefined4 **)(DAT_100a40f8 + 0x368 + local_14 * 4);
   iVar6 = local_14 * 0xe + DAT_100a40f8;
@@ -149,19 +149,19 @@ LAB_10002fb1:
     _AIL_set_sample_user_data_12(uVar4,1,param_1);
     _AIL_set_sample_user_data_12(uVar4,2,local_14);
     _AIL_set_sample_user_data_12(uVar4,3,0);
-    _AIL_set_sample_user_data_12(uVar4,4,(undefined4)(param_2));
-    _AIL_register_EOS_callback_8(uVar4,(undefined4)(FUN_100033ce));
+    _AIL_set_sample_user_data_12(uVar4,4,(undefined4)(mem));
+    _AIL_register_EOS_callback_8(uVar4,(undefined4)(HandleSampleEnd));
     if ((0 < (int)param_1) && (*(short *)((int)DAT_101e8db4 + param_1 * 8 + 2) != -1)) {
       psVar1 = (short *)((int)DAT_101e8db4 + param_1 * 8 + 2);
       *psVar1 = *psVar1 + 1;
     }
   }
   else {
-    if (param_2 == (LPVOID)0x0) {
+    if (mem == (LPVOID)0x0) {
       FUN_1008664f(param_1,(int *)PTR_DAT_100af0a8);
     }
     else {
-      HeapFree(DAT_100adf74,1,param_2);
+      HeapFree(DAT_100adf74,1,mem);
     }
     *(undefined4 *)(DAT_100a40f8 + 0x368 + local_14 * 4) = 0;
     local_14 = 0xfffffff9;

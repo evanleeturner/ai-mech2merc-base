@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: MIT */
 /* mercsw 1003c190 */
-unsigned int __cdecl IsWithinRadius3(int param_1, int param_2, int param_3, int radius)
+unsigned int __cdecl IsWithinRadius3_Likely(int param_1, int param_2, int param_3, int radius_Likely)
 {
     unsigned long long a;
     unsigned long long b;
@@ -11,7 +11,7 @@ unsigned int __cdecl IsWithinRadius3(int param_1, int param_2, int param_3, int 
     a = (unsigned long long)((long long)param_1) * (unsigned long long)((long long)param_1);
     b = (unsigned long long)((long long)param_2) * (unsigned long long)((long long)param_2);
     c = (unsigned long long)((long long)param_3) * (unsigned long long)((long long)param_3);
-    d = (unsigned long long)((long long)radius) * (unsigned long long)((long long)radius);
+    d = (unsigned long long)((long long)radius_Likely) * (unsigned long long)((long long)radius_Likely);
 
     sum = a + b + c;
 

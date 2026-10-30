@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: MIT */
 /* mercsw 100266c9 */
 /* mercsw 100266c9: Ghidra's C, repaired by tools/ghidra_repair.py */
-undefined __cdecl FUN_1002637d(int param_1);
+undefined __cdecl EnsureSegmentDirection(int param_1);
 undefined __cdecl FUN_10026423(int param_1);
 
 void __cdecl FUN_100266c9(int * param_1, int param_2, int param_3, int param_4)
@@ -18,7 +18,7 @@ void __cdecl FUN_100266c9(int * param_1, int param_2, int param_3, int param_4)
   iVar1 = param_1[0xd];
   param_1[0xd] = 0;
   if (iVar1 == 1) {
-    FUN_1002637d((int)param_1);
+    EnsureSegmentDirection((int)param_1);
   }
   else if (iVar1 == 2) {
     FUN_10026423((int)param_1);

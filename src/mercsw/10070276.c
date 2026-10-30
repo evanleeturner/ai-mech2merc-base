@@ -9,7 +9,7 @@ LONG __stdcall DefWindowProcA(HWND, UINT, UINT, LONG);
 int __stdcall PeekMessageA(void *, HWND, UINT, UINT, UINT);
 int __stdcall TranslateMessage(const void *);
 
-void __cdecl FUN_10070276(uint param_1, UINT param_2, uint param_3)
+void __cdecl ProcessKeyboardMessages(uint param_1, UINT param_2, uint param_3)
 
 {
   BOOL BVar1;

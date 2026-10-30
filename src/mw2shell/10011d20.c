@@ -11,7 +11,7 @@ extern undefined2 DAT_100c41e6;
 extern undefined DAT_100c42a9;
 undefined __thiscall FUN_1005f7d0(void * this, int param_1);
 
-void __stdcall FUN_10011d20(void)
+void __stdcall SetOneObjectPerTripleByIndex_Likely(void)
 
 {
   void *this;

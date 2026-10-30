@@ -11,7 +11,7 @@ char * __cdecl _strchr(char * _Str, int _Val);
 int __cdecl __isctype(int _C, int _Type);
 int __cdecl FID_conflict__wprintf(char * _Format, ...);
 
-undefined4 __stdcall FUN_10017b70(void)
+undefined4 __stdcall GenerateBwdChunkRevNumber(void)
 
 {
   char cVar1;

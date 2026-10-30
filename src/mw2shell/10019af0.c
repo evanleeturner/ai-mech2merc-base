@@ -19,10 +19,10 @@ extern HANDLE DAT_10098224;
 extern undefined4 DAT_100a6744;
 extern undefined DAT_100c49d0[];
 undefined __cdecl FUN_10017ff0(int param_1);
-int __cdecl FUN_1000cd20(int param_1);
+int __cdecl CountDistinctEntryKeys_Likely(int param_1);
 LPVOID __stdcall HeapAlloc(HANDLE, DWORD, DWORD);
 undefined4 __cdecl FUN_10018060(int param_1, int param_2);
-undefined4 __cdecl FUN_10050490(int param_1);
+undefined4 __cdecl GetFieldAtOffset4(int param_1);
 
 undefined4 * __cdecl FUN_10019af0(int param_1)
 
@@ -45,7 +45,7 @@ undefined4 * __cdecl FUN_10019af0(int param_1)
     return (undefined4 *)0x0;
   }
   FUN_10017ff0(param_1);
-  iVar3 = FUN_1000cd20(param_1);
+  iVar3 = CountDistinctEntryKeys_Likely(param_1);
   puVar4 = HeapAlloc(DAT_10098224,1,iVar3 * 0xa8 + 0x118);
   *puVar4 = 0x213;
   puVar4[7] = (undefined4)(LAB_1001a3d0);
@@ -163,7 +163,7 @@ undefined4 * __cdecl FUN_10019af0(int param_1)
         puVar1[10] = iVar5;
         puVar1[0xb] = 0xffffffff;
         puVar1[8] = 0;
-        uVar8 = FUN_10050490((int)piVar6);
+        uVar8 = GetFieldAtOffset4((int)piVar6);
         puVar1[0xc] = uVar8;
         puVar1 = puVar4 + (local_c + local_14 + 1) * 0xe;
         *puVar1 = 0xb6;
@@ -179,7 +179,7 @@ undefined4 * __cdecl FUN_10019af0(int param_1)
         puVar1[0xb] = 0xffffffff;
         puVar1[0xd] = 0xffffffff;
         puVar1[8] = 0;
-        uVar8 = FUN_10050490((int)piVar6);
+        uVar8 = GetFieldAtOffset4((int)piVar6);
         puVar1[0xc] = uVar8;
         puVar1 = puVar4 + (local_c + local_14 + 2) * 0xe;
         *puVar1 = 0xf2;
@@ -195,7 +195,7 @@ undefined4 * __cdecl FUN_10019af0(int param_1)
         puVar1[0xb] = 0xffffffff;
         puVar1[0xd] = 0xffffffff;
         puVar1[8] = 0;
-        uVar8 = FUN_10050490((int)piVar6);
+        uVar8 = GetFieldAtOffset4((int)piVar6);
         local_14 = local_14 + 3;
         local_8 = local_8 + 1;
         puVar1[0xc] = uVar8;

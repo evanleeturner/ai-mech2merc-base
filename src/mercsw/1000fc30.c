@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: MIT */
 /* mercsw 1000fc30 */
-int ApproxLength3(int param_1, int param_2, int param_3)
+int ApproxLength3_Likely(int param_1, int param_2, int param_3)
 {
     int iVar1;
     int largest;

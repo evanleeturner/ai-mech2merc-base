@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: MIT */
 /* mercsw 100821fe */
-extern unsigned int g_bitmapHeader100c9250;
+extern unsigned int g_bitmapHeader100c9250_Likely;
 extern unsigned int DAT_100c9254;
 extern int DAT_100c9258;
 extern unsigned short DAT_100c925c;
@@ -14,7 +14,7 @@ extern unsigned int DAT_100c9274;
 
 void __cdecl InitBitmapHeader8Bit(unsigned int width, int height)
 {
-    g_bitmapHeader100c9250 = 0x28;
+    g_bitmapHeader100c9250_Likely = 0x28;
     DAT_100c9254 = width;
     DAT_100c9258 = (int)(0u - (unsigned int)height);
     DAT_100c925c = 1;

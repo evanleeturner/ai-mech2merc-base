@@ -7,7 +7,7 @@ extern char DAT_1012327a[];
 
 int __cdecl __strcmpi(const char *a, const char *b);
 
-unsigned int __cdecl FUN_10001d0a(char *param_1)
+unsigned int __cdecl FUN_10001d0a(char *str1)
 {
     char cVar1;
     int iVar2;
@@ -16,7 +16,7 @@ unsigned int __cdecl FUN_10001d0a(char *param_1)
     int local_c;
 
     local_18 = 0;
-    if (*param_1 == '\0') {
+    if (*str1 == '\0') {
         local_18 = 0;
     }
     else {
@@ -26,7 +26,7 @@ unsigned int __cdecl FUN_10001d0a(char *param_1)
                      local_c = local_c + 1) {
                     cVar1 = DAT_1012327a[local_14 * 0x3c0a + local_c * 0x13f];
                     if ((((cVar1 == '\0') || (cVar1 == '\x01')) || (cVar1 == '\a')) &&
-                        (iVar2 = __strcmpi(param_1, (char *)(*(int *)(DAT_10168410 + local_14 * 4) +
+                        (iVar2 = __strcmpi(str1, (char *)(*(int *)(DAT_10168410 + local_14 * 4) +
                                                              local_c * 0x97 + 0x70)), iVar2 == 0)) {
                         local_18 = local_18 | (1u << ((unsigned char)local_c & 0x1f)) |
                                    ((1u << ((unsigned char)local_14 & 0x1f)) << 0x10);

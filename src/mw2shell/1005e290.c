@@ -9,7 +9,7 @@ extern undefined DAT_100c6068;
 extern undefined4 * DAT_100c61b4;
 char * __cdecl _strncpy(char * _Dest, char * _Source, size_t _Count);
 
-void __cdecl FUN_1005e290(int param_1, char * param_2, char * param_3, char * param_4, int param_5, char * param_6, int param_7, undefined2 param_8, undefined2 param_9, undefined2 param_10, int param_11, undefined2 param_12, undefined2 param_13)
+void __cdecl AppendHundredByteRecord_Likely(int param_1, char * param_2, char * param_3, char * param_4, int param_5, char * param_6, int param_7, undefined2 param_8, undefined2 param_9, undefined2 param_10, int param_11, undefined2 param_12, undefined2 param_13)
 
 {
   char *_Dest;

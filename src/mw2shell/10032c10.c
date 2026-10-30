@@ -7,8 +7,8 @@ extern HANDLE DAT_10098224;
 extern int * DAT_100a67c8;
 extern char s_Upgraded_heat_sinks_have_been_pl_10093634[];
 LPVOID __stdcall HeapAlloc(HANDLE, DWORD, DWORD);
-undefined4 __cdecl FUN_10017df0(int * param_1, undefined4 param_2);
-undefined __cdecl FUN_1005b1b0(char * param_1);
+undefined4 __cdecl AppendToCollection(int * param_1, undefined4 param_2);
+undefined __cdecl ShowMessageDialog(char * param_1);
 
 void __stdcall FUN_10032c10(void)
 
@@ -44,10 +44,10 @@ void __stdcall FUN_10032c10(void)
       *(undefined4 *)((int)piVar1 + 10) = 0xffffffff;
       *(undefined4 *)((int)piVar1 + 0xe) = 0xffffffff;
       *(undefined4 *)((int)piVar1 + 0x12) = 0xffffffff;
-      FUN_10017df0(DAT_100a67c8,(undefined4)(piVar1));
+      AppendToCollection(DAT_100a67c8,(undefined4)(piVar1));
       iVar3 = iVar3 + -1;
     } while (iVar3 != 0);
   }
-  FUN_1005b1b0(s_Upgraded_heat_sinks_have_been_pl_10093634);
+  ShowMessageDialog(s_Upgraded_heat_sinks_have_been_pl_10093634);
   return;
 }

@@ -10,14 +10,14 @@ int __cdecl _fputs(char * _Str, FILE * _File);
 int __cdecl _fflush(FILE * _File);
 int __cdecl _fclose(FILE * _File);
 
-void __cdecl FUN_1004f1e0(char * param_1)
+void __cdecl FUN_1004f1e0(char * str)
 
 {
   if (DAT_1009be04 == (FILE *)0x0) {
     DAT_1009be04 = FID_conflict___wfopen(s_debug_log_1009be08,DAT_1009bf5c);
   }
   if (DAT_1009be04 != (FILE *)0x0) {
-    _fputs(param_1,DAT_1009be04);
+    _fputs(str,DAT_1009be04);
     _fflush(DAT_1009be04);
     _fclose(DAT_1009be04);
     DAT_1009be04 = (FILE *)0x0;

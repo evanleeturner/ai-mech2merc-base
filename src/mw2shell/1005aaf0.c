@@ -8,7 +8,7 @@ void *__cdecl __wfopen(unsigned short *filename, unsigned short *mode);
 unsigned int __cdecl _fread(void *buffer, unsigned int size, unsigned int count, void *stream);
 int __cdecl _fclose(void *stream);
 
-void __stdcall FUN_1005aaf0(void)
+void __stdcall ReadMw2SndCfgFile(void)
 {
     void *_File;
     

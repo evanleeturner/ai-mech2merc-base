@@ -4,7 +4,7 @@ extern int DAT_100b38fc;
 extern double _DAT_100a1220;
 extern int DAT_100adf38;
 
-extern unsigned int __cdecl ApproxLength3(int param_1, int param_2, int param_3);
+extern unsigned int __cdecl ApproxLength3_Likely(int param_1, int param_2, int param_3);
 extern unsigned int __cdecl FUN_10002570(unsigned int param_1, int param_2);
 extern int __cdecl FixedMul16(int param_1, int param_2);
 extern void __cdecl FUN_100444ea(int param_1, int *param_2, int param_3, short param_4, int param_5, int param_6);
@@ -43,7 +43,7 @@ int __cdecl FUN_10044054(int *param_1)
   }
   else {
     if ((short)param_1[0x79] == 0) {
-      local_8 = ApproxLength3(*(int *)(iVar3 + 0x428), 0, *(int *)(iVar3 + 0x430));
+      local_8 = ApproxLength3_Likely(*(int *)(iVar3 + 0x428), 0, *(int *)(iVar3 + 0x430));
       uVar2 = FUN_10002570(local_8, 500000);
       __builtin_memcpy((void *)((int)param_1 + 0x1e6), &uVar2, 4);
       if (*param_1 != 1) {

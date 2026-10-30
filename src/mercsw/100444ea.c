@@ -6,9 +6,9 @@ extern undefined DAT_100af4fc[];
 int __cdecl FUN_1002fc9d(int param_1);
 undefined __cdecl FUN_10089060(int * param_1, int * param_2, int * param_3, int * param_4);
 undefined __cdecl FUN_100261f0(int * param_1, int param_2, int param_3, int param_4, int param_5, int param_6, int param_7);
-int __cdecl FUN_1000fc30(int param_1, int param_2, int param_3);
+int __cdecl ApproxLength3_Likely(int param_1, int param_2, int param_3);
 undefined __cdecl FUN_10026423(int param_1);
-undefined __cdecl FUN_1002637d(int param_1);
+undefined __cdecl EnsureSegmentDirection(int param_1);
 
 void __cdecl FUN_100444ea(int param_1, int * param_2, int param_3, short param_4, int param_5, int param_6)
 
@@ -68,9 +68,9 @@ void __cdecl FUN_100444ea(int param_1, int * param_2, int param_3, short param_4
     local_10 = *(int *)(param_1 + 0x54);
   }
   FUN_100261f0(param_2,local_c,local_10,local_18,local_14,local_10,local_1c);
-  iVar1 = FUN_1000fc30(local_14 - local_c,0,local_1c - local_18);
+  iVar1 = ApproxLength3_Likely(local_14 - local_c,0,local_1c - local_18);
   if (iVar1 < 0xbb9) {
-    FUN_1002637d((int)param_2);
+    EnsureSegmentDirection((int)param_2);
   }
   else {
     FUN_10026423((int)param_2);

@@ -3,7 +3,7 @@
 /* mw2shell 1000c4c0: Ghidra's C, repaired by tools/ghidra_repair.py */
 int __thiscall FUN_10050b20(void * this, char * param_1);
 
-int __cdecl FUN_1000c4c0(void * param_1, int param_2, char * param_3)
+int __cdecl CenterTextAtX_Likely(void * param_1, int param_2, char * param_3)
 
 {
   int iVar1;

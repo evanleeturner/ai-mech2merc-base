@@ -3,7 +3,7 @@
 /* mercsw 1003b049: Ghidra's C, repaired by tools/ghidra_repair.py */
 extern undefined4 DAT_100b38fc;
 extern undefined4 PTR_DAT_100aaf68;
-int __cdecl FUN_1000fc30(int param_1, int param_2, int param_3);
+int __cdecl ApproxLength3_Likely(int param_1, int param_2, int param_3);
 int __cdecl FUN_10039980(int param_1);
 undefined4 * __cdecl FUN_10024008(undefined4 param_1, undefined4 param_2, undefined4 param_3);
 undefined __cdecl FUN_100399ec(int param_1, int param_2);
@@ -26,7 +26,7 @@ void __cdecl FUN_1003b049(int param_1, int param_2, int param_3, int param_4, in
   int local_1c;
   int local_18;
   
-  iVar1 = FUN_1000fc30(param_1 - *(int *)PTR_DAT_100aaf68,param_2 - *(int *)(PTR_DAT_100aaf68 + 4),
+  iVar1 = ApproxLength3_Likely(param_1 - *(int *)PTR_DAT_100aaf68,param_2 - *(int *)(PTR_DAT_100aaf68 + 4),
                        param_3 - *(int *)(PTR_DAT_100aaf68 + 8));
   if ((iVar1 <= *(int *)(PTR_DAT_100aaf68 + 0x40)) &&
      (piVar2 = (int *)FUN_10039980(param_7), piVar2 != (int *)0x0)) {
@@ -43,7 +43,7 @@ void __cdecl FUN_1003b049(int param_1, int param_2, int param_3, int param_4, in
       piVar2[7] = iVar1 + -0xfa;
       *(undefined2 *)(puVar3 + 4) = 1;
       iVar1 = *(int *)(*(int *)((int)puVar3 + 0x1d2) + 0x6c);
-      iVar4 = FUN_1000fc30(param_4,param_5,param_6);
+      iVar4 = ApproxLength3_Likely(param_4,param_5,param_6);
       *(int *)(iVar1 + 0x40) = iVar4;
       *(int *)(iVar1 + 0x34) = param_1;
       *(int *)(iVar1 + 0x38) = param_2;

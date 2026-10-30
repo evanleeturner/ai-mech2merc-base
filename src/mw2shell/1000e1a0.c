@@ -23,7 +23,7 @@ void * __stdcall SelectPalette(void *, void *, int);
 UINT __stdcall SetPaletteEntries(void *, UINT, UINT, const void *);
 UINT __stdcall RealizePalette(void *);
 
-undefined4 __cdecl FUN_1000e1a0(int param_1, int param_2, undefined2 * param_3, int param_4)
+undefined4 __cdecl SetPaletteRangeAndRealize(int param_1, int param_2, undefined2 * param_3, int param_4)
 
 {
   char cVar1;

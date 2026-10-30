@@ -4,7 +4,7 @@
 extern undefined4 DAT_100aae80;
 extern undefined4 DAT_100aaf74;
 extern undefined4 DAT_100aaf7c;
-extern undefined4 DAT_100aafbc;
+extern undefined4 g_disabled100aafbc_Likely;
 extern undefined4 DAT_101eb480;
 extern undefined4 DAT_101eb484;
 extern undefined DAT_101f52e0[];
@@ -15,7 +15,7 @@ undefined __cdecl FUN_1003eb9c(int * param_1, int param_2, uint * param_3);
 undefined __cdecl FUN_1003f893(int * param_1, int param_2, int param_3, uint * param_4);
 undefined __cdecl FUN_10019df1(int param_1, int param_2, int param_3);
 undefined4 __cdecl FUN_1001a040(uint param_1, uint param_2);
-int __cdecl FUN_1001a060(int param_1, int param_2);
+int __cdecl FixedMul30(int param_1, int param_2);
 undefined4 __cdecl FUN_1005f040(int param_1, int param_2, uint * param_3, int param_4, int param_5, int param_6, int param_7);
 undefined __cdecl FUN_10055f10(uint param_1, int param_2, int * param_3, int param_4);
 
@@ -70,13 +70,13 @@ void __cdecl FUN_10016e60(int param_1, uint * param_2, uint param_3)
       FUN_10055f10(param_3,param_1,(int *)param_2,-1);
     }
     else if ((uVar2 == 0x2000) && (DAT_100aaf7c != 0)) {
-      if (DAT_100aafbc == 0) {
+      if (g_disabled100aafbc_Likely == 0) {
         for (local_18 = 0; local_18 < param_1; local_18 = local_18 + 1) {
           uVar2 = FUN_1001a040(*(uint *)(PTR_DAT_100aaf68 + 0x94),local_1c[5]);
           local_1c[5] = uVar2;
-          uVar2 = FUN_1001a060(local_1c[3],local_1c[5]);
+          uVar2 = FixedMul30(local_1c[3],local_1c[5]);
           local_1c[3] = uVar2;
-          uVar2 = FUN_1001a060(local_1c[4],local_1c[5]);
+          uVar2 = FixedMul30(local_1c[4],local_1c[5]);
           local_1c[4] = uVar2;
           local_1c[2] = local_1c[2] << 0x10;
           local_1c = local_1c + 6;
@@ -88,14 +88,14 @@ void __cdecl FUN_10016e60(int param_1, uint * param_2, uint param_3)
   else if (uVar2 < 0x5001) {
     if (uVar2 == 0x5000) {
       if (DAT_100aaf7c != 0) {
-        if (DAT_100aafbc == 0) {
+        if (g_disabled100aafbc_Likely == 0) {
           uVar2 = param_2[2];
           for (local_18 = 0; local_18 < param_1; local_18 = local_18 + 1) {
             uVar3 = FUN_1001a040(*(uint *)(PTR_DAT_100aaf68 + 0x94),local_1c[5]);
             local_1c[5] = uVar3;
-            uVar3 = FUN_1001a060(local_1c[3],local_1c[5]);
+            uVar3 = FixedMul30(local_1c[3],local_1c[5]);
             local_1c[3] = uVar3;
-            uVar3 = FUN_1001a060(local_1c[4],local_1c[5]);
+            uVar3 = FixedMul30(local_1c[4],local_1c[5]);
             local_1c[4] = uVar3;
             if (((local_24 == 0) || (3 < (int)uVar2)) || ((int)uVar2 < (int)local_1c[2])) {
               local_24 = 0;
@@ -149,7 +149,7 @@ void __cdecl FUN_10016e60(int param_1, uint * param_2, uint param_3)
     }
     else if ((uVar2 == 0x6000) && (DAT_100aaf7c != 0)) {
       uVar2 = param_2[2];
-      for (local_18 = 0; iVar1 = DAT_100aafbc, local_18 < param_1; local_18 = local_18 + 1) {
+      for (local_18 = 0; iVar1 = g_disabled100aafbc_Likely, local_18 < param_1; local_18 = local_18 + 1) {
         if (((local_24 == 0) || (3 < (int)uVar2)) || ((int)uVar2 < (int)local_1c[2])) {
           local_24 = 0;
         }
@@ -159,9 +159,9 @@ void __cdecl FUN_10016e60(int param_1, uint * param_2, uint param_3)
         local_1c[2] = local_1c[2] << 0x10;
         local_1c = local_1c + 6;
       }
-      DAT_100aafbc = 1;
+      g_disabled100aafbc_Likely = 1;
       FUN_1005f040(param_3 & 0xff,param_1,param_2,(param_3 & 0xf00) >> 8,0,1,local_24);
-      DAT_100aafbc = iVar1;
+      g_disabled100aafbc_Likely = iVar1;
     }
   }
   else if (uVar2 == 0x8000) {

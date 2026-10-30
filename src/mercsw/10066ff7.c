@@ -4,8 +4,8 @@
 extern undefined4 PTR_DAT_100aaf68;
 undefined __cdecl FUN_10006b9a(int param_1);
 int __cdecl FUN_10006b20(int param_1);
-int __cdecl FUN_10003d60(int param_1, int param_2);
-int __cdecl FUN_10066ec0(int param_1, uint param_2, undefined4 * param_3);
+int __cdecl FixedMul16(int param_1, int param_2);
+int __cdecl CheckedFixedDiv16(int param_1, uint param_2, undefined4 * param_3);
 int * __cdecl FUN_10067126(int * param_1, undefined4 param_2, int param_3, int * param_4);
 
 int * __cdecl FUN_10066ff7(int param_1, int param_2, int * param_3)
@@ -34,8 +34,8 @@ int * __cdecl FUN_10066ff7(int param_1, int param_2, int * param_3)
   }
   iVar1 = FUN_10006b9a(iVar3);
   iVar3 = FUN_10006b20(iVar3);
-  uVar2 = FUN_10003d60(iVar3 >> 0xd,*(int *)(PTR_DAT_100aaf68 + 0x44));
-  uVar2 = FUN_10066ec0(iVar1 >> 0xd,uVar2,(undefined4 *)(&local_c));
+  uVar2 = FixedMul16(iVar3 >> 0xd,*(int *)(PTR_DAT_100aaf68 + 0x44));
+  uVar2 = CheckedFixedDiv16(iVar1 >> 0xd,uVar2,(undefined4 *)(&local_c));
   local_8 = (uVar2 & 1) << 2 | (local_8 & 0xfffffffb);
   local_c = -local_c;
   FUN_10067126(&local_14,local_8,local_c,param_3);

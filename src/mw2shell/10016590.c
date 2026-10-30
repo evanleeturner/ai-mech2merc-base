@@ -6,15 +6,15 @@ extern char DAT_1008ef60[];
 extern char DAT_1008ef64[];
 char * __cdecl _strtok(char * _Str, char * _Delim);
 int __cdecl _toupper(int _C);
-undefined4 __cdecl FUN_1004f240(int param_1);
+undefined4 __cdecl FUN_1004f240(int str);
 
-void __cdecl FUN_10016590(char * param_1)
+void __cdecl FUN_10016590(char * str)
 
 {
   char *pcVar1;
   int iVar2;
   
-  pcVar1 = _strtok(param_1,DAT_1008ef60);
+  pcVar1 = _strtok(str,DAT_1008ef60);
   do {
     if (pcVar1 == (char *)0x0) {
       return;

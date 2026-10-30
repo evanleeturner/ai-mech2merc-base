@@ -5,7 +5,7 @@ typedef struct tagPOINT { LONG x; LONG y; } tagPOINT;
 typedef struct tagMSG { HWND hwnd; UINT message; UINT wParam; LONG lParam; DWORD time; tagPOINT pt; } tagMSG;
 undefined4 __cdecl FUN_100701b9(undefined2 * param_1);
 int __stdcall PeekMessageA(void *, HWND, UINT, UINT, UINT);
-undefined __cdecl FUN_10070276(uint param_1, UINT param_2, uint param_3);
+undefined __cdecl ProcessKeyboardMessages(uint param_1, UINT param_2, uint param_3);
 
 short __stdcall FUN_1007069f(void)
 
@@ -18,7 +18,7 @@ short __stdcall FUN_1007069f(void)
   if (local_8[0] == 0) {
     BVar1 = PeekMessageA(&local_24,(HWND)0x0,0x100,0x108,1);
     if (BVar1 != 0) {
-      FUN_10070276(local_24.message,local_24.wParam,local_24.lParam);
+      ProcessKeyboardMessages(local_24.message,local_24.wParam,local_24.lParam);
       FUN_100701b9((undefined2 *)(local_8));
     }
   }

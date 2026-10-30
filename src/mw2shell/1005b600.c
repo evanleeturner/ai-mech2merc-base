@@ -8,7 +8,7 @@ extern char s_keyboard_100a5960[];
 extern char s_keyboard_100a5978[];
 int __cdecl _sprintf(char * _Dest, char * _Format, ...);
 
-undefined4 __cdecl FUN_1005b600(undefined4 param_1, char * param_2)
+undefined4 __cdecl FillKeyboardEntryRecord_Likely(undefined4 param_1, char * param_2)
 
 {
   param_2[0x5c] = 'y';

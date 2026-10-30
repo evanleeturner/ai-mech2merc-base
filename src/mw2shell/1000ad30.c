@@ -3,7 +3,7 @@
 /* mw2shell 1000ad30: Ghidra's C, repaired by tools/ghidra_repair.py */
 undefined4 __cdecl FUN_10018060(int param_1, int param_2);
 
-int __cdecl FUN_1000ad30(int param_1, int param_2)
+int __cdecl FindListEntryByKey_Likely(int param_1, int param_2)
 
 {
   int iVar1;

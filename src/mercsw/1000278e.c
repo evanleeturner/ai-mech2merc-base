@@ -6,7 +6,7 @@ extern HANDLE DAT_100adf74;
 void __stdcall _AIL_end_sample_4(unsigned int a);
 BOOL __stdcall HeapFree(HANDLE hHeap, DWORD dwFlags, LPVOID lpMem);
 
-void __stdcall FUN_1000278e(void)
+void __stdcall StopAndFreeAllSamples(void)
 {
     unsigned int local_8;
 

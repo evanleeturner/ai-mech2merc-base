@@ -10,9 +10,9 @@ ushort * __cdecl FUN_1008668b(int param_1, uint param_2, int * param_3);
 undefined4 __cdecl FUN_1005b547(int param_1, int param_2);
 undefined __cdecl FUN_1008664f(uint param_1, int * param_2);
 undefined4 __cdecl FUN_10002570(uint param_1, int param_2);
-int __cdecl FUN_100663e5(int param_1, int param_2, int param_3, int param_4);
-int __cdecl FUN_10065e40(undefined4 param_1, int param_2, int param_3);
-int * __cdecl FUN_100660e1(int param_1, int * param_2, int * param_3);
+int __cdecl ScaleRectAboutCenter(int param_1, int param_2, int param_3, int param_4);
+int __cdecl ScaleRect(undefined4 param_1, int param_2, int param_3);
+int * __cdecl ScalePointBySize(int param_1, int * param_2, int * param_3);
 
 void __cdecl FUN_10048402(int * param_1)
 
@@ -42,7 +42,7 @@ void __cdecl FUN_10048402(int * param_1)
       local_8 = FUN_10002570(local_8,DAT_101f52d4 + 1);
       local_c = FUN_10002570(local_c,(piVar1[3] - piVar1[1]) + 1);
       local_8 = FUN_10002570(local_8,(piVar1[4] - piVar1[2]) + 1);
-      FUN_100663e5((int)piVar1,(int)piVar1,local_c,local_8);
+      ScaleRectAboutCenter((int)piVar1,(int)piVar1,local_c,local_8);
     }
     local_24 = 0;
     local_20 = FUN_10002570(1,param_1[0xf] + 2);
@@ -51,13 +51,13 @@ void __cdecl FUN_10048402(int * param_1)
     param_1[0x19] = local_20 * 2;
     param_1[0x17] = param_1[0x19];
     param_1[0x15] = param_1[0x17];
-    FUN_10065e40(*local_1c,(int)local_1c,(int)local_1c);
-    FUN_10065e40(*piVar1,(int)piVar1,(int)piVar1);
-    FUN_100660e1((int)local_1c,&local_24,&local_24);
-    FUN_100660e1((int)local_1c,param_1 + 0x12,param_1 + 0x12);
-    FUN_100660e1((int)local_1c,param_1 + 0x14,param_1 + 0x14);
-    FUN_100660e1((int)local_1c,param_1 + 0x16,param_1 + 0x16);
-    FUN_100660e1((int)local_1c,param_1 + 0x18,param_1 + 0x18);
+    ScaleRect(*local_1c,(int)local_1c,(int)local_1c);
+    ScaleRect(*piVar1,(int)piVar1,(int)piVar1);
+    ScalePointBySize((int)local_1c,&local_24,&local_24);
+    ScalePointBySize((int)local_1c,param_1 + 0x12,param_1 + 0x12);
+    ScalePointBySize((int)local_1c,param_1 + 0x14,param_1 + 0x14);
+    ScalePointBySize((int)local_1c,param_1 + 0x16,param_1 + 0x16);
+    ScalePointBySize((int)local_1c,param_1 + 0x18,param_1 + 0x18);
     if ((*(byte *)(param_1 + 1) & 0x10) != 0) {
       iVar3 = piVar1[1];
       iVar2 = local_1c[1];

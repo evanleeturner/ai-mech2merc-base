@@ -4,7 +4,7 @@
 extern HANDLE DAT_10098224;
 extern int DAT_100a365c;
 extern undefined4 DAT_100a3660;
-extern LPVOID DAT_100a3664;
+extern LPVOID g_entries100a3664_Likely;
 int __stdcall HeapFree(HANDLE, DWORD, LPVOID);
 
 void __stdcall FUN_100576d0(void)
@@ -18,18 +18,18 @@ void __stdcall FUN_100576d0(void)
   if (0 < DAT_100a365c) {
     iVar2 = 0;
     do {
-      iVar1 = *(int *)((int)DAT_100a3664 + iVar2);
+      iVar1 = *(int *)((int)g_entries100a3664_Likely + iVar2);
       if (iVar1 != 0) {
-        ((void (*)(int))((**(code **)(iVar1 + 0xc))))(((int *)((int)DAT_100a3664 + iVar2))[0x1d]);
+        ((void (*)(int))((**(code **)(iVar1 + 0xc))))(((int *)((int)g_entries100a3664_Likely + iVar2))[0x1d]);
       }
       iVar2 = iVar2 + 0x78;
       iVar3 = iVar3 + 1;
     } while (iVar3 < DAT_100a365c);
   }
-  if (DAT_100a3664 != (LPVOID)0x0) {
-    HeapFree(DAT_10098224,1,DAT_100a3664);
+  if (g_entries100a3664_Likely != (LPVOID)0x0) {
+    HeapFree(DAT_10098224,1,g_entries100a3664_Likely);
   }
-  DAT_100a3664 = (LPVOID)0x0;
+  g_entries100a3664_Likely = (LPVOID)0x0;
   DAT_100a365c = 0;
   DAT_100a3660 = 0;
   return;

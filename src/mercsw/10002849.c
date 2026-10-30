@@ -4,13 +4,13 @@
 extern undefined4 DAT_100a40f8;
 extern undefined4 DAT_100b38fc;
 undefined4 __stdcall _AIL_sample_buffer_ready_4(undefined4);
-int __cdecl FUN_1000381c(int param_1);
+int __cdecl ComputeSamplePan(int param_1);
 undefined4 __stdcall _AIL_set_sample_pan_8(undefined4, undefined4);
 undefined4 __stdcall _AIL_set_sample_volume_8(undefined4, undefined4);
 undefined4 __stdcall _AIL_load_sample_buffer_16(undefined4, undefined4, undefined4, undefined4);
 byte * __cdecl FUN_100396a4(byte * param_1, undefined1 * param_2, int param_3, uint param_4, int * param_5);
 
-void __stdcall FUN_10002849(void)
+void __stdcall RefillStreamingSampleBuffers(void)
 
 {
   int *piVar1;
@@ -28,7 +28,7 @@ void __stdcall FUN_10002849(void)
          (iVar2 = _AIL_sample_buffer_ready_4(*(undefined4 *)(DAT_100a40f8 + 4 + local_8 * 4)),
          iVar2 != -1)) {
         if (*(int *)(DAT_100a40f8 + 0x428 + local_8 * 4) == -1) {
-          iVar3 = FUN_1000381c(*(int *)(DAT_100a40f8 + 1000 + local_8 * 4));
+          iVar3 = ComputeSamplePan(*(int *)(DAT_100a40f8 + 1000 + local_8 * 4));
           _AIL_set_sample_pan_8(*(undefined4 *)(DAT_100a40f8 + 4 + local_8 * 4),iVar3);
         }
         else {

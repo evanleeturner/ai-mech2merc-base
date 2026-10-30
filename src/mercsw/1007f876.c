@@ -9,13 +9,13 @@ extern undefined4 DAT_100ab094;
 extern undefined DAT_10160c00[];
 extern undefined4 PTR_DAT_100aaf68;
 undefined __cdecl FUN_1003d2d3(int param_1, int param_2);
-int __cdecl FUN_1000fc30(int param_1, int param_2, int param_3);
+int __cdecl ApproxLength3_Likely(int param_1, int param_2, int param_3);
 int __cdecl FUN_1007be21(int * param_1, undefined4 param_2);
 undefined __cdecl FUN_1007c7bc(int param_1, int param_2, int param_3, int param_4);
 undefined __cdecl FUN_1002f322(int param_1, undefined4 * param_2, undefined4 * param_3, undefined4 * param_4);
 undefined __cdecl FUN_100037f0(uint param_1, undefined4 param_2, uint param_3, uint param_4, int param_5);
 undefined4 __cdecl FUN_10002570(uint param_1, int param_2);
-int __cdecl FUN_10003d60(int param_1, int param_2);
+int __cdecl FixedMul16(int param_1, int param_2);
 
 undefined4 __cdecl FUN_1007f876(int param_1, int * param_2, int * param_3, int * param_4, int * param_5)
 
@@ -52,11 +52,11 @@ undefined4 __cdecl FUN_1007f876(int param_1, int * param_2, int * param_3, int *
         local_28 = *param_3 - *(int *)(local_1c + 0x38);
         local_8 = *param_4 - *(int *)(local_1c + 0x3c);
         local_10 = *(int *)(local_1c + 0x40) + *(int *)(param_1 + 0x41c);
-        local_14 = FUN_1000fc30(local_24,local_28,local_8);
+        local_14 = ApproxLength3_Likely(local_24,local_28,local_8);
         if (local_14 < local_10) {
           if (((byte)*(undefined2 *)(local_1c + 2) & 0xf0) == 0x50) {
             local_2c = *(int **)(local_1c + 0x18);
-            local_14 = FUN_1000fc30(*(int *)(param_1 + 0x428),*(int *)(param_1 + 0x42c),
+            local_14 = ApproxLength3_Likely(*(int *)(param_1 + 0x428),*(int *)(param_1 + 0x42c),
                                     *(int *)(param_1 + 0x430));
             if ((0 < local_14) && (local_30 = FUN_1007be21(local_2c,1), -1 < local_30)) {
               FUN_1007c7bc(local_30,*(int *)(param_1 + 0x428) * 2,*(int *)(param_1 + 0x42c) * 2,
@@ -79,13 +79,13 @@ undefined4 __cdecl FUN_1007f876(int param_1, int * param_2, int * param_3, int *
             DAT_100aa55c = FUN_10002570(local_28,local_14);
             DAT_100aa560 = FUN_10002570(local_8,local_14);
           }
-          iVar1 = FUN_10003d60(DAT_100aa558,local_10);
+          iVar1 = FixedMul16(DAT_100aa558,local_10);
           *param_2 = *(int *)(local_1c + 0x34) + iVar1;
-          iVar1 = FUN_10003d60(DAT_100aa55c,local_10);
+          iVar1 = FixedMul16(DAT_100aa55c,local_10);
           *param_3 = *(int *)(local_1c + 0x38) + iVar1;
-          iVar1 = FUN_10003d60(DAT_100aa560,local_10);
+          iVar1 = FixedMul16(DAT_100aa560,local_10);
           *param_4 = *(int *)(local_1c + 0x3c) + iVar1;
-          iVar1 = FUN_1000fc30(*(int *)(param_1 + 0x434),*(int *)(param_1 + 0x438),
+          iVar1 = ApproxLength3_Likely(*(int *)(param_1 + 0x434),*(int *)(param_1 + 0x438),
                                *(int *)(param_1 + 0x43c));
           if (-iVar1 >> 2 < 9) {
             local_20 = -4;
@@ -93,11 +93,11 @@ undefined4 __cdecl FUN_1007f876(int param_1, int * param_2, int * param_3, int *
           else {
             local_20 = -(-iVar1 >> 2) >> 1;
           }
-          iVar1 = FUN_10003d60(DAT_100aa558,local_20);
+          iVar1 = FixedMul16(DAT_100aa558,local_20);
           *(int *)(param_1 + 0x428) = iVar1;
-          iVar1 = FUN_10003d60(DAT_100aa55c,local_20);
+          iVar1 = FixedMul16(DAT_100aa55c,local_20);
           *(int *)(param_1 + 0x42c) = iVar1;
-          iVar1 = FUN_10003d60(DAT_100aa560,local_20);
+          iVar1 = FixedMul16(DAT_100aa560,local_20);
           *(int *)(param_1 + 0x430) = iVar1;
           *param_5 = local_1c;
           return 1;

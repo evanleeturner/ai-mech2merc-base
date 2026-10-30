@@ -10,7 +10,7 @@ undefined __stdcall FUN_10035e90(void);
 undefined __stdcall FUN_100361c0(void);
 undefined __cdecl FUN_100361e0(int param_1, int param_2, int param_3, int param_4, int param_5);
 undefined4 __cdecl FUN_10018060(int param_1, int param_2);
-int __cdecl FUN_1000ad30(int param_1, int param_2);
+int __cdecl FindListEntryByKey_Likely(int param_1, int param_2);
 undefined4 __cdecl FUN_1000b9a0(int param_1);
 char * __cdecl _strncpy(char * _Dest, char * _Source, size_t _Count);
 uint __cdecl FUN_10035f30(int param_1, char * param_2, char * param_3, char * param_4);
@@ -46,7 +46,7 @@ void __stdcall FUN_1001d650(void)
       pcVar2 = (char *)FUN_10018060(DAT_100a67a4,iVar6);
       iVar5 = iVar4;
       if (*(int *)(pcVar2 + 0x20) != -1) {
-        iVar3 = FUN_1000ad30(DAT_100a6798,*(int *)(pcVar2 + 0x20));
+        iVar3 = FindListEntryByKey_Likely(DAT_100a6798,*(int *)(pcVar2 + 0x20));
         FUN_1000b9a0(iVar3);
         *(undefined1 *)(iVar3 + 0x84b) = 1;
         _strncpy(local_20,(char *)(iVar3 + 0x823),8);

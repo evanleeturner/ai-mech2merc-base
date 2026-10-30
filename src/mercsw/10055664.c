@@ -7,7 +7,7 @@ extern undefined4 DAT_10160ec4;
 extern undefined4 DAT_10160ee8;
 int __cdecl FUN_1005558c(int param_1, int param_2, uint param_3, int param_4, int param_5, int param_6);
 undefined8 __cdecl FUN_10055bc0(int param_1, int param_2, int param_3, int param_4, int param_5);
-uint __cdecl FUN_10055b60(int param_1, int param_2, int param_3, byte param_4);
+uint __cdecl ScaledDiffShift_Likely(int param_1, int param_2, int param_3, byte param_4);
 
 void __cdecl FUN_10055664(int * param_1, int * param_2, uint param_3, uint * param_4)
 
@@ -24,9 +24,9 @@ void __cdecl FUN_10055664(int * param_1, int * param_2, uint param_3, uint * par
   param_4[3] = param_3;
   uVar3 = FUN_10055bc0(param_1[3],param_2[3],param_3,param_1[4],param_2[4]);
   param_4[4] = (uint)uVar3;
-  uVar2 = FUN_10055b60(param_3,DAT_10160ec4,uVar1,(byte)DAT_10160eb4);
+  uVar2 = ScaledDiffShift_Likely(param_3,DAT_10160ec4,uVar1,(byte)DAT_10160eb4);
   *param_4 = uVar2;
-  uVar1 = FUN_10055b60(DAT_10160ee8,param_4[4],uVar1,(byte)DAT_10160eb8);
+  uVar1 = ScaledDiffShift_Likely(DAT_10160ee8,param_4[4],uVar1,(byte)DAT_10160eb8);
   param_4[1] = uVar1;
   local_c = *param_1 - *param_2;
   if (local_c < 0) {

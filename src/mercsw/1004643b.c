@@ -12,7 +12,7 @@ undefined4 __stdcall FUN_10046175(void);
 undefined4 __stdcall FUN_10046563(void);
 undefined4 __cdecl FUN_10046dbc(int * param_1);
 undefined __cdecl FUN_10046f3b(uint * param_1);
-undefined4 __cdecl FUN_10047052(uint param_1);
+undefined4 __cdecl SetAuxDeviceVolume(uint param_1);
 
 undefined4 __stdcall FUN_1004643b(void)
 
@@ -40,7 +40,7 @@ undefined4 __stdcall FUN_1004643b(void)
       FUN_10046dbc((int *)(DAT_100b04b8));
       FUN_10046f3b((uint *)(DAT_100c7cf0));
     }
-    FUN_10047052(DAT_100b3c54);
+    SetAuxDeviceVolume(DAT_100b3c54);
     uVar2 = 1;
   }
   else {

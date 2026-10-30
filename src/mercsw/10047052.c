@@ -5,7 +5,7 @@ typedef UINT MMRESULT;
 extern undefined4 DAT_100b04b4;
 UINT __stdcall auxSetVolume(UINT, DWORD);
 
-undefined4 __cdecl FUN_10047052(uint param_1)
+undefined4 __cdecl SetAuxDeviceVolume(uint param_1)
 
 {
   MMRESULT MVar1;

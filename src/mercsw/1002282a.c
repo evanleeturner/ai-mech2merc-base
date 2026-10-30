@@ -2,7 +2,7 @@
 /* mercsw 1002282a */
 /* mercsw 1002282a: Ghidra's C, repaired by tools/ghidra_repair.py */
 extern undefined4 DAT_100ad6bc;
-undefined4 __stdcall FUN_10022aaa(void);
+undefined4 __stdcall GetUnitSize(void);
 int __cdecl FUN_100814bb(int param_1, int param_2);
 undefined __cdecl FUN_100228e4(int param_1);
 
@@ -15,7 +15,7 @@ undefined4 __cdecl FUN_1002282a(undefined4 param_1, int param_2)
   int local_c;
   
   *(undefined4 *)(param_2 + 0x20) = 0;
-  iVar1 = FUN_10022aaa();
+  iVar1 = GetUnitSize();
   piVar2 = (int *)FUN_100814bb(iVar1,DAT_100ad6bc);
   if (piVar2 == (int *)0x0) {
     uVar3 = 0;

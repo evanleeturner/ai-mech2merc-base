@@ -34,7 +34,7 @@ extern int _DAT_1016a694;
 extern int _DAT_1016a698;
 extern int _DAT_1016a69c;
 
-int __cdecl FUN_10022aaa(void);
+int __cdecl GetUnitSize(void);
 int __cdecl FUN_10030398(void);
 int __cdecl FUN_1005dbf1(void);
 
@@ -44,7 +44,7 @@ void * __stdcall FUN_1002d233(void)
 
     _DAT_1016a654 = (int)((unsigned int)(int)DAT_1016a638 * 0x250u);
     _DAT_1016a650 = DAT_100ad6b8;
-    _DAT_1016a65c = FUN_10022aaa();
+    _DAT_1016a65c = GetUnitSize();
     _DAT_1016a65c = (int)((unsigned int)_DAT_1016a65c * (unsigned int)(int)DAT_1016a638);
     _DAT_1016a658 = DAT_100ad6bc;
     _DAT_1016a664 = FUN_10030398();

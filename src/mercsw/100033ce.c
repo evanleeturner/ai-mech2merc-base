@@ -11,7 +11,7 @@ int __stdcall HeapFree(HANDLE, DWORD, LPVOID);
 uint __cdecl FUN_10002d8f(uint param_1, LPVOID param_2, ushort param_3, short param_4, int param_5);
 undefined4 __stdcall _AIL_set_sample_user_data_12(undefined4, undefined4, undefined4);
 
-void __stdcall FUN_100033ce(undefined4 param_1)
+void __stdcall HandleSampleEnd(undefined4 param_1)
 
 {
   short *psVar1;

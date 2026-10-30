@@ -13,7 +13,7 @@ extern undefined4 PTR_DAT_100af100;
 ushort * __cdecl FUN_1005f9f7(int param_1, ushort * param_2, ushort * param_3);
 ushort * __cdecl FUN_1008668b(int param_1, uint param_2, int * param_3);
 undefined4 __cdecl FUN_1001a040(uint param_1, uint param_2);
-int __cdecl FUN_1001a060(int param_1, int param_2);
+int __cdecl FixedMul30(int param_1, int param_2);
 undefined __cdecl FUN_1000c3a0(int * param_1, byte * param_2, short param_3, short param_4, int param_5, uint * param_6, undefined4 param_7, undefined4 param_8, int param_9);
 
 undefined4 __cdecl FUN_1001793d(int param_1, int * param_2, int param_3, int param_4)
@@ -70,9 +70,9 @@ undefined4 __cdecl FUN_1001793d(int param_1, int * param_2, int param_3, int par
     for (local_1f8 = 0; local_1f8 < param_3; local_1f8 = local_1f8 + 1) {
       uVar2 = FUN_1001a040(*(uint *)(PTR_DAT_100aaf68 + 0x94),local_1fc[5]);
       local_1fc[5] = uVar2;
-      uVar2 = FUN_1001a060(local_1fc[3],local_1fc[5]);
+      uVar2 = FixedMul30(local_1fc[3],local_1fc[5]);
       local_1fc[3] = uVar2;
-      uVar2 = FUN_1001a060(local_1fc[4],local_1fc[5]);
+      uVar2 = FixedMul30(local_1fc[4],local_1fc[5]);
       local_1fc[4] = uVar2;
       local_1fc = local_1fc + 6;
     }

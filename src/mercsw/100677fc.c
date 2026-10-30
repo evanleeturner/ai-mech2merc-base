@@ -4,7 +4,7 @@
 extern undefined4 PTR_DAT_100aaf68;
 undefined __cdecl FUN_10006b9a(int param_1);
 int __cdecl FUN_10006b20(int param_1);
-int __cdecl FUN_10003d60(int param_1, int param_2);
+int __cdecl FixedMul16(int param_1, int param_2);
 undefined __stdcall FUN_10006d3e(void);
 int * __cdecl FUN_10067951(int param_1, int * param_2, undefined4 param_3, int param_4, int * param_5);
 
@@ -34,7 +34,7 @@ int * __cdecl FUN_100677fc(int param_1, int param_2, int * param_3)
   iVar1 = FUN_10006b9a(iVar2);
   iVar1 = iVar1 >> 0xd;
   iVar2 = FUN_10006b20(iVar2);
-  iVar2 = FUN_10003d60(iVar2 >> 0xd,*(int *)(PTR_DAT_100aaf68 + 0x44));
+  iVar2 = FixedMul16(iVar2 >> 0xd,*(int *)(PTR_DAT_100aaf68 + 0x44));
   if (((iVar1 == 0) || (0x7fff < iVar2 / iVar1)) || (iVar2 / iVar1 < -0x8000)) {
     local_c = local_c | 4;
   }

@@ -5,9 +5,9 @@ extern undefined4 DAT_100aefa8;
 extern undefined DAT_10165950[];
 extern undefined DAT_101665d0[];
 uint __cdecl FUN_1003c170(int param_1, int param_2, int param_3);
-int __cdecl FUN_10003d60(int param_1, int param_2);
+int __cdecl FixedMul16(int param_1, int param_2);
 undefined4 __cdecl FUN_10011e60(int param_1, int param_2, int param_3);
-int __cdecl FUN_10015b30(int param_1, int param_2);
+int __cdecl FixedMul29(int param_1, int param_2);
 undefined __cdecl FUN_1003c1f0(uint * param_1, uint * param_2, short * param_3, uint param_4, uint param_5);
 
 void __cdecl FUN_1003b59a(int param_1)
@@ -74,7 +74,7 @@ void __cdecl FUN_1003b59a(int param_1)
   local_48 = FUN_1003c170(local_60,local_4c,-local_44);
   uVar3 = local_4c;
   iVar2 = local_54;
-  iVar1 = FUN_10003d60(local_60,local_1c);
+  iVar1 = FixedMul16(local_60,local_1c);
   local_3c = FUN_10011e60(iVar1,uVar3,iVar2);
   *(int *)(local_38 + 0xb0) = local_3c;
   local_10 = FUN_1003c170(local_3c,local_54,local_2c);
@@ -91,13 +91,13 @@ void __cdecl FUN_1003b59a(int param_1)
   if (799 < (int)local_40) {
     local_40 = 799;
   }
-  iVar2 = FUN_10015b30(local_60,*(int *)(DAT_10165950 + local_64 * 4));
+  iVar2 = FixedMul29(local_60,*(int *)(DAT_10165950 + local_64 * 4));
   *(int *)(local_38 + 0xa8) = iVar2 + (*(int *)(DAT_101665d0 + local_64 * 4) >> 0xd);
-  iVar2 = FUN_10015b30(local_3c,*(int *)(DAT_10165950 + local_10 * 4));
+  iVar2 = FixedMul29(local_3c,*(int *)(DAT_10165950 + local_10 * 4));
   *(int *)(local_38 + 0xac) = iVar2 + (*(int *)(DAT_101665d0 + local_10 * 4) >> 0xd);
   local_30[0] = 2;
   local_34[0] = 2;
-  uVar3 = FUN_10003d60(local_60,local_1c);
+  uVar3 = FixedMul16(local_60,local_1c);
   FUN_1003c1f0(&local_28,&local_5c,local_30,local_4c,uVar3);
   FUN_1003c1f0(&local_24,&local_58,local_34,local_4c,local_60);
   *(int *)(local_38 + 0x3c) = ((int)local_24 >> 0x11) + 1;

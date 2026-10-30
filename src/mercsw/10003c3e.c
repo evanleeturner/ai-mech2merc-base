@@ -7,7 +7,7 @@ undefined4 __stdcall _AIL_end_sample_4(undefined4);
 undefined4 __stdcall _AIL_release_sample_handle_4(undefined4);
 undefined __cdecl FUN_1008664f(uint param_1, int * param_2);
 
-void __cdecl FUN_10003c3e(int param_1)
+void __cdecl StopAndReleaseSoundSample(int param_1)
 
 {
   undefined4 uVar1;

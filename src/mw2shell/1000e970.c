@@ -16,10 +16,10 @@ extern HMENU DAT_100d08ec;
 extern char s_mintro_1008e448[];
 int __stdcall PostMessageA(HWND, UINT, UINT, LONG);
 undefined __cdecl FUN_1000f940(undefined4 param_1);
-undefined4 __cdecl FUN_1000e8f0(undefined4 param_1, UINT param_2, WPARAM param_3);
-undefined __cdecl FUN_100166c0(HMENU param_1);
+undefined4 __cdecl FUN_1000e8f0(undefined4 param_1, UINT msg, WPARAM wParam);
+undefined __cdecl GrayMenuCommands_Likely(HMENU param_1);
 
-undefined4 __cdecl FUN_1000e970(byte * param_1, UINT param_2, WPARAM param_3)
+undefined4 __cdecl FUN_1000e970(byte * param_1, UINT msg, WPARAM wParam)
 
 {
   byte bVar1;
@@ -69,22 +69,22 @@ LAB_1000e9d9:
       } while (bVar1 != 0);
       iVar3 = 0;
 LAB_1000e9de:
-      if ((iVar3 != 0) && (param_2 != 0xc004)) {
-        PostMessageA(DAT_100d08e8,param_2,param_3,0);
+      if ((iVar3 != 0) && (msg != 0xc004)) {
+        PostMessageA(DAT_100d08e8,msg,wParam,0);
         DAT_1008e3e8 = 0xc004;
         DAT_1008e3e4 = 0xc004;
         return 0;
       }
     }
   }
-  DAT_100b0588 = param_2;
+  DAT_100b0588 = msg;
   if (DAT_1008edf4 == LAB_1000e7f0) {
     FUN_1000f940((undefined4)(param_1));
     return 1;
   }
-  iVar3 = FUN_1000e8f0((undefined4)(param_1),param_2,param_3);
+  iVar3 = FUN_1000e8f0((undefined4)(param_1),msg,wParam);
   if (iVar3 != 0) {
-    FUN_100166c0(DAT_100d08ec);
+    GrayMenuCommands_Likely(DAT_100d08ec);
     DAT_100a6ba4 = 1;
     return 1;
   }

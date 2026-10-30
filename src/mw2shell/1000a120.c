@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: MIT */
 /* mw2shell 1000a120 */
-int __cdecl RoundUpTo100(int param_1)
+int __cdecl RoundUpTo100_Likely(int param_1)
 {
     int rem = param_1 % 100;
     if (rem != 0) {

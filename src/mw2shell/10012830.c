@@ -7,7 +7,7 @@ extern undefined4 DAT_100a724c;
 undefined __fastcall FUN_100133d0(int param_1);
 int __cdecl FUN_1000e150(int param_1, int param_2, int param_3);
 
-void __fastcall FUN_10012830(int param_1)
+void __fastcall FlushPendingUpdates_Likely(int param_1)
 
 {
   int iVar1;

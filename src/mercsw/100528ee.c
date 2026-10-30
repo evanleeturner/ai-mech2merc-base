@@ -8,12 +8,12 @@ extern undefined4 DAT_100eef40[];
 extern undefined DAT_1016a600[];
 extern char s__s___s_100b0de0[];
 int __cdecl _toupper(int _C);
-undefined __cdecl FUN_10052813(char * param_1);
-undefined4 __cdecl FUN_10012a14(int param_1, char * param_2);
+undefined __cdecl FUN_10052813(char * c);
+undefined4 __cdecl FUN_10012a14(int c, char * param_2);
 int __cdecl _sprintf(char * _Dest, char * _Format, ...);
-undefined4 __cdecl FUN_1005be24(char * param_1, int param_2, int param_3, int param_4);
+undefined4 __cdecl FUN_1005be24(char * c, int param_2, int param_3, int param_4);
 
-undefined4 __cdecl FUN_100528ee(uint param_1)
+undefined4 __cdecl FUN_100528ee(uint c)
 
 {
   undefined4 uVar1;
@@ -29,9 +29,9 @@ undefined4 __cdecl FUN_100528ee(uint param_1)
   else {
     local_5c = DAT_100ad6e0;
   }
-  if ((param_1 & 0x400) == 0) {
-    local_58[0] = (char)param_1;
-    if ((char)param_1 == '\b') {
+  if ((c & 0x400) == 0) {
+    local_58[0] = (char)c;
+    if ((char)c == '\b') {
       if (0 < DAT_100b0a14) {
         DAT_100b0a14 = DAT_100b0a14 + -1;
       }
@@ -39,7 +39,7 @@ undefined4 __cdecl FUN_100528ee(uint param_1)
       uVar1 = 1;
     }
     else {
-      if ((char)param_1 == '\r') {
+      if ((char)c == '\r') {
         if (DAT_100ad6e0 < 1) {
           if (DAT_100ad6e0 == (undefined4)(-1)) {
             local_5c = -1;
@@ -50,7 +50,7 @@ undefined4 __cdecl FUN_100528ee(uint param_1)
           DAT_100ad6e0 = 0;
         }
       }
-      else if ((char)param_1 == '\x1b') {
+      else if ((char)c == '\x1b') {
         DAT_100ad6e0 = 0;
         puVar3 = (undefined4 *)(DAT_1016a600);
         for (iVar2 = 10; iVar2 != 0; iVar2 = iVar2 + -1) {
@@ -61,23 +61,23 @@ undefined4 __cdecl FUN_100528ee(uint param_1)
         return 1;
       }
       if (DAT_100b0a14 < 0x28) {
-        if ((param_1 & 0x100) != 0) {
+        if ((c & 0x100) != 0) {
           if (DAT_100ad6e0 != (undefined4)(-1)) {
             return 0;
           }
-          if ((char)param_1 == 'e') {
+          if ((char)c == 'e') {
             local_5c = -3;
           }
           else {
-            if ((char)param_1 != 'f') {
+            if ((char)c != 'f') {
               return 0;
             }
             local_5c = -2;
           }
           DAT_100ad6e0 = 0;
         }
-        if ((param_1 & 0x200) != 0) {
-          iVar2 = _toupper((int)(char)param_1);
+        if ((c & 0x200) != 0) {
+          iVar2 = _toupper((int)(char)c);
           local_58[0] = (char)iVar2;
           FUN_10052813(local_58);
         }

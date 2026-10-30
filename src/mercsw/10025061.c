@@ -5,7 +5,7 @@ extern undefined4 DAT_100ab374;
 extern undefined4 DAT_100ab378;
 extern undefined4 DAT_100b38fc;
 undefined4 * __cdecl FUN_10024008(undefined4 param_1, undefined4 param_2, undefined4 param_3);
-int __cdecl FUN_1000fc30(int param_1, int param_2, int param_3);
+int __cdecl ApproxLength3_Likely(int param_1, int param_2, int param_3);
 undefined __cdecl FUN_1002f783(int param_1);
 undefined __cdecl FUN_1002f37a(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 undefined __cdecl FUN_1002fbc0(int * param_1);
@@ -27,7 +27,7 @@ void __cdecl FUN_10025061(undefined4 param_1, undefined4 param_2, undefined4 par
      (puVar2 = FUN_10024008((undefined4)(FUN_10024df7),(undefined4)(FUN_10024eaa),0), puVar2 != (undefined4 *)0x0)) {
     *(undefined2 *)(puVar2 + 4) = 1;
     iVar1 = *(int *)(*(int *)((int)puVar2 + 0x1d2) + 0x6c);
-    iVar3 = FUN_1000fc30(param_4 * 100,param_5 * 100,param_6 * 100);
+    iVar3 = ApproxLength3_Likely(param_4 * 100,param_5 * 100,param_6 * 100);
     *(int *)(iVar1 + 0x40) = iVar3;
     *(undefined4 *)(iVar1 + 0x34) = param_1;
     *(undefined4 *)(iVar1 + 0x38) = param_2;

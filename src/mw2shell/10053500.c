@@ -7,7 +7,7 @@ extern undefined4 DAT_1009f378;
 extern undefined DAT_1009fc2c[];
 extern char s__c__s__s_1009fc20[];
 extern char s__s___1009fc18[];
-int __cdecl FUN_100576a0(int param_1);
+int __cdecl EntryAddress120_Likely(int param_1);
 int __cdecl FID_conflict__fwprintf(FILE * _File, wchar_t * _Format, ...);
 undefined __cdecl FUN_10053470(FILE * param_1, int param_2);
 
@@ -17,7 +17,7 @@ void __cdecl FUN_10053500(FILE * param_1, undefined4 param_2, int param_3)
   int iVar1;
   int iVar2;
   
-  iVar2 = FUN_100576a0(*(int *)(param_3 + 4));
+  iVar2 = EntryAddress120_Likely(*(int *)(param_3 + 4));
   iVar1 = *(int *)(param_3 + 0x10);
   if (-1 < iVar1) {
     DAT_1009f378 = DAT_1009f378 + 1;

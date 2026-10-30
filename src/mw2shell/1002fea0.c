@@ -1,9 +1,9 @@
 /* SPDX-License-Identifier: MIT */
 /* mw2shell 1002fea0 */
 /* mw2shell 1002fea0: Ghidra's C, repaired by tools/ghidra_repair.py */
-int __cdecl FUN_1000cfe0(int param_1);
+int __cdecl MultiplyBy625(int param_1);
 
-int __cdecl FUN_1002fea0(int param_1, int param_2)
+int __cdecl ComputeSlotGridDifferenceScore_Likely(int param_1, int param_2)
 
 {
   uint uVar1;
@@ -42,6 +42,6 @@ int __cdecl FUN_1002fea0(int param_1, int param_2)
     iVar5 = iVar5 + 0x12;
     local_8 = local_8 + -1;
   } while (local_8 != 0);
-  iVar5 = FUN_1000cfe0(local_c);
+  iVar5 = MultiplyBy625(local_c);
   return iVar5 + iVar7 * 50000;
 }

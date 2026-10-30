@@ -9,14 +9,14 @@
     "verdict": "preserved"
   },
   "builds": null,
-  "created_at": "2026-10-27T18:27:21-05:00",
+  "created_at": "2026-10-30T15:05:54-05:00",
   "evidence": {
     "decompiler": {
       "name": "Ghidra",
       "version": "12.1.4"
     }
   },
-  "file_sha256": "e3aa165dff2648d414130ff3025555d749b5ebd2961cc62064c4c11b0af05ed9",
+  "file_sha256": "42d7828308a68193f35d512adc2ae7255fdf1c6b134bf67c80e744e229fe2413",
   "gates": {
     "compiles": {
       "verdict": "passed"
@@ -36,12 +36,13 @@
   },
   "touched_surface": {
     "address": "10054330",
-    "source_sha256": "6c6c34209c201762bf2060f509fd00f0038a8e6915b238c1f8fb9f660b436c79",
+    "source_sha256": "d120b77e5dd05e19319fb82c61f1b480a6c06b8816f3e9a41809b92843660cc2",
     "target": "mercsw"
   },
   "verification": {
     "caveats": [
-      "a clean compile is necessary, never sufficient"
+      "a clean compile is necessary, never sufficient",
+      "identical objects prove the function and global renames; without debug info a parameter's or local's name never reaches the object, so the text checks carry those"
     ]
   }
 }

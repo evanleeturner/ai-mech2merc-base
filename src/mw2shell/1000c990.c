@@ -17,7 +17,7 @@ undefined4 __cdecl FUN_10017c90(undefined4 * param_1, int param_2, undefined4 pa
 undefined4 __cdecl FUN_10018060(int param_1, int param_2);
 undefined __cdecl FUN_1000c770(int * param_1, int param_2);
 
-void __stdcall FUN_1000c990(void)
+void __stdcall ResetListsAndProcessEntries_Likely(void)
 
 {
   int *piVar1;

@@ -29,7 +29,7 @@ FILE * __cdecl FID_conflict___wfopen(char * _Filename, char * _Mode);
 int __cdecl FID_conflict__fwprintf(FILE * _File, wchar_t * _Format, ...);
 undefined __cdecl FUN_10053780(FILE * param_1, byte * param_2, int * param_3);
 int __cdecl _fclose(FILE * _File);
-undefined __cdecl FUN_1005b1b0(char * param_1);
+undefined __cdecl ShowMessageDialog(char * param_1);
 
 undefined4 __stdcall FUN_10053a40(void)
 
@@ -122,7 +122,7 @@ LAB_10053b5e:
       DAT_1009f378 = 0;
       DAT_1009f37c = 0;
       if (_File == (FILE *)0x0) {
-        FUN_1005b1b0(s_Error__Could_not_write_map_file__1009fe70);
+        ShowMessageDialog(s_Error__Could_not_write_map_file__1009fe70);
       }
       else {
         uVar5 = 0;

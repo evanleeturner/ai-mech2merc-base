@@ -3,7 +3,7 @@
 /* mw2shell 1000cd20: Ghidra's C, repaired by tools/ghidra_repair.py */
 undefined4 __cdecl FUN_10018060(int param_1, int param_2);
 
-int __cdecl FUN_1000cd20(int param_1)
+int __cdecl CountDistinctEntryKeys_Likely(int param_1)
 
 {
   int iVar1;

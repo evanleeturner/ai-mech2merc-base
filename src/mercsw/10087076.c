@@ -9,7 +9,7 @@ extern undefined4 PTR_DAT_100c2be0;
 char * __cdecl _fgets(char * _Buf, int _MaxCount, FILE * _File);
 int __cdecl __isctype(int _C, int _Type);
 
-undefined4 __cdecl FUN_10087076(char * param_1, int param_2, FILE * param_3)
+undefined4 __cdecl FUN_10087076(char * buf, int maxCount, FILE * file)
 
 {
   bool bVar1;
@@ -19,12 +19,12 @@ undefined4 __cdecl FUN_10087076(char * param_1, int param_2, FILE * param_3)
   
   bVar1 = false;
   do {
-    pcVar2 = _fgets(param_1,param_2,param_3);
+    pcVar2 = _fgets(buf,maxCount,file);
     if (pcVar2 == (char *)0x0) {
       return 0;
     }
     DAT_100baa0c = DAT_100baa0c + 1;
-    for (local_8 = param_1; *local_8 != '\0'; local_8 = local_8 + 1) {
+    for (local_8 = buf; *local_8 != '\0'; local_8 = local_8 + 1) {
       if ((*local_8 == '\n') || (*local_8 == '#')) {
         *local_8 = '\0';
         break;

@@ -14,7 +14,7 @@ extern undefined4 DAT_100c7f94;
 extern undefined4 DAT_100c7fa4;
 undefined4 __cdecl FUN_10064cd8(void * param_1, uint param_2);
 undefined4 __cdecl FUN_10065891(byte * param_1);
-int __cdecl FUN_10064d15(uint param_1);
+int __cdecl IndexBitWidth_Likely(uint param_1);
 undefined4 __cdecl FUN_10064e6a(byte param_1);
 int __cdecl FUN_10065126(int param_1, undefined * param_2);
 undefined4 __stdcall FUN_10065815(void);
@@ -64,7 +64,7 @@ int __cdecl FUN_10064f77(int param_1, int param_2, int param_3, int param_4, und
     local_f = 0;
     iVar1 = FUN_10065891(&local_20);
     if (iVar1 == 0) {
-      local_8 = FUN_10064d15(DAT_100c7fa4);
+      local_8 = IndexBitWidth_Likely(DAT_100c7fa4);
       if (local_8 == 1) {
         local_8 = 2;
       }

@@ -15,7 +15,7 @@ undefined __cdecl FUN_1008664f(uint param_1, int * param_2);
 undefined4 __stdcall FUN_10046fb4(void);
 undefined4 __stdcall FUN_10046563(void);
 undefined __cdecl FUN_100108a0(undefined4 param_1, char * param_2);
-undefined4 __cdecl FUN_10046fc9(int param_1);
+undefined4 __cdecl IsWithinBounds_Likely(int param_1);
 undefined __cdecl FUN_10046b4d(int param_1);
 undefined4 __stdcall FUN_1004663a(void);
 
@@ -49,7 +49,7 @@ void __stdcall FUN_1006aa37(void)
       FUN_100108a0(0x53,DAT_100b3cb4);
     }
     else {
-      iVar1 = FUN_10046fc9(DAT_100b3c40);
+      iVar1 = IsWithinBounds_Likely(DAT_100b3c40);
       if (iVar1 == 0) {
         DAT_100b3c40 = -1;
       }

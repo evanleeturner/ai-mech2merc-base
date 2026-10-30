@@ -5,7 +5,7 @@ extern char s_RemoveBettyQueue__bug_100a7148[];
 undefined __cdecl FUN_1006af90(undefined4 param_1);
 undefined __cdecl FUN_100108a0(undefined4 param_1, char * param_2);
 
-undefined4 __cdecl FUN_10007dc0(undefined4 * param_1)
+undefined4 __cdecl RemoveBettyQueueEntry(undefined4 * param_1)
 
 {
   undefined4 uVar1;

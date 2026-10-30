@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: MIT */
 /* mercsw 10055b60 */
-unsigned int __cdecl ScaledDiffShift(int param_1, int param_2, int param_3, unsigned char shift)
+unsigned int __cdecl ScaledDiffShift_Likely(int param_1, int param_2, int param_3, unsigned char shift)
 {
     int diff;
     unsigned long long prod;

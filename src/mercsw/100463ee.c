@@ -5,7 +5,7 @@ typedef DWORD DWORD_PTR;
 extern undefined4 DAT_100b04b0;
 DWORD __stdcall mciSendCommandA(UINT, UINT, DWORD, DWORD);
 
-void __cdecl FUN_100463ee(undefined4 param_1, int param_2)
+void __cdecl PlayMciDeviceFromTo(undefined4 param_1, int param_2)
 
 {
   undefined1 local_14 [4];

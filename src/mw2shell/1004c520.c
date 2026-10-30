@@ -12,7 +12,7 @@ undefined4 __cdecl FUN_10018060(int param_1, int param_2);
 undefined __cdecl FUN_10050400(int * param_1);
 undefined __cdecl FUN_100503d0(int * param_1);
 undefined __cdecl FUN_10050390(int * param_1);
-undefined4 __cdecl FUN_10017df0(int * param_1, undefined4 param_2);
+undefined4 __cdecl AppendToCollection(int * param_1, undefined4 param_2);
 undefined __cdecl FUN_100180f0(int * param_1, char param_2);
 undefined __cdecl FUN_10017ec0(int param_1, int param_2, char param_3);
 undefined __cdecl FUN_1000be60(int param_1, int param_2);
@@ -65,7 +65,7 @@ void __stdcall FUN_1004c520(void)
           FUN_10050390(piVar3);
           piVar4 = DAT_100a67b4;
         }
-        FUN_10017df0(piVar4,(undefined4)(piVar3));
+        AppendToCollection(piVar4,(undefined4)(piVar3));
       }
 LAB_1004c595:
       iVar10 = iVar10 + 1;
@@ -116,10 +116,10 @@ LAB_1004c5e5:
     FUN_1000be60(iVar5,(int)DAT_100a6798);
     pcVar6 = FUN_1000ae80(local_20);
     *(undefined4 *)(pcVar6 + 0x810) = *(undefined4 *)(iVar5 + 0x810);
-    FUN_10017df0(DAT_100a6798,iVar5);
+    AppendToCollection(DAT_100a6798,iVar5);
     puVar9 = (undefined2 *)(iVar5 + 0x770);
     pcVar11 = pcVar6 + 0x770;
-    FUN_10017df0(DAT_100a678c,(undefined4)(pcVar6));
+    AppendToCollection(DAT_100a678c,(undefined4)(pcVar6));
     iVar10 = 8;
     do {
       uVar2 = *(undefined2 *)pcVar11;

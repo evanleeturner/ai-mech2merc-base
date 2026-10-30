@@ -3,7 +3,7 @@
 /* mercsw 1008628d: Ghidra's C, repaired by tools/ghidra_repair.py */
 extern undefined4 DAT_100ba7bc;
 
-ushort * __cdecl FUN_1008628d(uint param_1, int * param_2)
+ushort * __cdecl FindCacheEntry(uint param_1, int * param_2)
 
 {
   ushort *local_8;

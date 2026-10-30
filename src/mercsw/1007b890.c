@@ -3,11 +3,11 @@
 /* mercsw 1007b890: Ghidra's C, repaired by tools/ghidra_repair.py */
 extern undefined4 DAT_100af17c;
 extern undefined4 PTR_DAT_100af0cc;
-ushort * __cdecl FUN_1008668b(int param_1, uint param_2, int * param_3);
+ushort * __cdecl FUN_1008668b(int param_1, uint str2, int * param_3);
 int __cdecl __strcmpi(char * _Str1, char * _Str2);
-undefined __cdecl FUN_1008664f(uint param_1, int * param_2);
+undefined __cdecl FUN_1008664f(uint param_1, int * str2);
 
-int __cdecl FUN_1007b890(uint param_1, char * param_2)
+int __cdecl FUN_1007b890(uint param_1, char * str2)
 
 {
   int iVar1;
@@ -30,7 +30,7 @@ int __cdecl FUN_1007b890(uint param_1, char * param_2)
     }
     local_1c = 0;
     local_c = local_14;
-    while ((local_1c < (short)local_c[4] && (iVar1 = __strcmpi(local_2c,param_2), iVar1 != 0))) {
+    while ((local_1c < (short)local_c[4] && (iVar1 = __strcmpi(local_2c,str2), iVar1 != 0))) {
       local_18 = local_18 + 6;
       local_1c = local_1c + 1;
       for (local_8 = 0; local_8 < 10; local_8 = local_8 + 1) {
@@ -38,7 +38,7 @@ int __cdecl FUN_1007b890(uint param_1, char * param_2)
         local_2c[local_8] = (char)local_20;
       }
     }
-    iVar1 = __strcmpi(local_2c,param_2);
+    iVar1 = __strcmpi(local_2c,str2);
     if (iVar1 == 0) {
       local_10 = (int)(short)local_18[5];
     }

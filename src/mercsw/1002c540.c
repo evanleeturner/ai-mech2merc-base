@@ -4,14 +4,14 @@
 extern undefined4 DAT_100aafa4;
 extern undefined4 DAT_100aafa8;
 extern undefined4 DAT_100aafb0;
-extern undefined4 DAT_100aafc0;
+extern undefined4 g_disabledBits100aafc0_Likely;
 extern undefined4 DAT_100ad6b4;
 extern undefined4 DAT_10115100[];
 extern int DAT_10115160;
 int __cdecl FUN_1007d8c1(int param_1, int param_2, int param_3, int param_4);
 undefined __cdecl FUN_1007d40c(int param_1, int param_2, int param_3, int param_4);
 undefined4 __cdecl FUN_10002570(uint param_1, int param_2);
-int __cdecl FUN_10003d60(int param_1, int param_2);
+int __cdecl FixedMul16(int param_1, int param_2);
 
 uint __cdecl FUN_1002c540(int param_1, int param_2, uint param_3, int param_4)
 
@@ -141,12 +141,12 @@ uint __cdecl FUN_1002c540(int param_1, int param_2, uint param_3, int param_4)
     if (local_18 == 0x2000) {
 LAB_1002c9c0:
       local_1c = 0xff;
-      if (DAT_100aafc0 == 0) {
+      if (g_disabledBits100aafc0_Likely == 0) {
         local_14 = param_3 & 0xff;
       }
-      else if (((DAT_100aafc0 & 0x100) == 0) ||
+      else if (((g_disabledBits100aafc0_Likely & 0x100) == 0) ||
               (((uVar4 & 0x100) == 0 && (((byte)uVar4 & 0xf0) != 0x50)))) {
-        if ((uVar4 & DAT_100aafc0) == 0) {
+        if ((uVar4 & g_disabledBits100aafc0_Likely) == 0) {
           local_14 = param_3 & 0xff;
         }
         else {
@@ -175,10 +175,10 @@ LAB_1002c9c0:
   else if (local_18 < 0x5001) {
     if (local_18 == 0x5000) goto LAB_1002c9c0;
     if (local_18 == 0x3000) {
-      if (DAT_100aafc0 == 0) {
+      if (g_disabledBits100aafc0_Likely == 0) {
         return param_3;
       }
-      if ((uVar4 & DAT_100aafc0) == 0) {
+      if ((uVar4 & g_disabledBits100aafc0_Likely) == 0) {
         return param_3;
       }
       local_18 = 0x1000;
@@ -214,22 +214,22 @@ LAB_1002cb37:
       (uVar5 = (**(ushort **)(param_1 + 0x20) & 0xf0) >> 4, uVar5 != 0)))) {
     if (DAT_100ad6b4 == 0) {
       iVar2 = (0x10 - uVar5) * 0x1000;
-      local_8 = FUN_10003d60(iVar2,local_8);
+      local_8 = FixedMul16(iVar2,local_8);
       local_8 = local_8 & 0xf;
       for (local_24 = 0; local_24 < DAT_10115160; local_24 = local_24 + 1) {
         iVar3 = DAT_10115100[local_24];
-        uVar5 = FUN_10003d60(iVar2,*(int *)(iVar3 + 0x2c));
+        uVar5 = FixedMul16(iVar2,*(int *)(iVar3 + 0x2c));
         *(uint *)(iVar3 + 0x2c) = uVar5 & 0xf;
       }
     }
     else {
       iVar2 = FUN_10002570(0xf - local_8,0xf);
-      iVar2 = FUN_10003d60(uVar5,iVar2);
+      iVar2 = FixedMul16(uVar5,iVar2);
       local_8 = local_8 + iVar2;
       for (local_24 = 0; local_24 < DAT_10115160; local_24 = local_24 + 1) {
         iVar2 = DAT_10115100[local_24];
         iVar3 = FUN_10002570(0xf - *(int *)(iVar2 + 0x2c),0xf);
-        iVar3 = FUN_10003d60(uVar5,iVar3);
+        iVar3 = FixedMul16(uVar5,iVar3);
         piVar1 = (int *)(iVar2 + 0x2c);
         *piVar1 = *piVar1 + iVar3;
       }

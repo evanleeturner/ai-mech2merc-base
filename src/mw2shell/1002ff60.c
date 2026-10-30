@@ -7,9 +7,9 @@ extern int * DAT_100a67b8;
 extern char s_Unknown_item_flag_Ok_10093260[];
 undefined __cdecl FUN_1000be30(undefined4 * param_1);
 undefined4 __cdecl FUN_10018060(int param_1, int param_2);
-undefined __cdecl FUN_1005b1b0(char * param_1);
+undefined __cdecl ShowMessageDialog(char * param_1);
 undefined __cdecl FUN_1000c770(int * param_1, int param_2);
-undefined4 __cdecl FUN_10017df0(int * param_1, undefined4 param_2);
+undefined4 __cdecl AppendToCollection(int * param_1, undefined4 param_2);
 undefined4 __cdecl FUN_1000c6b0(int param_1, int param_2);
 undefined __cdecl FUN_10017ec0(int param_1, int param_2, char param_3);
 undefined __stdcall FUN_10030090(void);
@@ -47,11 +47,11 @@ LAB_1002ffcf:
         FUN_1000c770(piVar3,0);
       }
       else if (cVar1 == '\x01') {
-        FUN_10017df0(DAT_100a67b8,(undefined4)(piVar3));
+        AppendToCollection(DAT_100a67b8,(undefined4)(piVar3));
       }
       else {
         if (cVar1 == '\x02') goto LAB_1002ffcf;
-        FUN_1005b1b0(s_Unknown_item_flag_Ok_10093260);
+        ShowMessageDialog(s_Unknown_item_flag_Ok_10093260);
       }
       iVar6 = iVar6 + 1;
     } while (iVar6 < *(int *)(DAT_1009200c + 4));

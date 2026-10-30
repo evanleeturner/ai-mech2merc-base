@@ -15,7 +15,7 @@ extern undefined4 DAT_100d1548;
 int __stdcall GetDeviceCaps(void *, int);
 UINT __stdcall GetSystemPaletteEntries(void *, UINT, UINT, void *);
 
-void __stdcall FUN_1000e330(void)
+void __stdcall CaptureSystemPaletteStaticColors(void)
 
 {
   UINT UVar1;

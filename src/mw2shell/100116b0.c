@@ -18,7 +18,7 @@ extern unsigned int DAT_1008eae0;
 extern unsigned int DAT_1008eae8;
 extern unsigned int DAT_100b0b34;
 
-void __stdcall FUN_100116b0(void)
+void __stdcall ZeroSeventeenGlobals(void)
 {
     DAT_1008eaa8 = 0;
     DAT_1008eaac = 0;

@@ -8,7 +8,7 @@ extern undefined4 PTR_DAT_10083d8c[];
 undefined __cdecl FUN_100361e0(int param_1, int param_2, int param_3, int param_4, int param_5);
 uint __cdecl FUN_10035f30(int param_1, char * param_2, char * param_3, char * param_4);
 undefined __cdecl FUN_1001ace0(char * param_1);
-undefined __cdecl FUN_100361a0(int param_1);
+undefined __cdecl MarkTableEntryUnset_Likely(int param_1);
 undefined __stdcall FUN_10036260(void);
 char * __cdecl _strncpy(char * _Dest, char * _Source, size_t _Count);
 undefined __stdcall FUN_10036280(void);
@@ -32,7 +32,7 @@ void __stdcall FUN_1001add0(void)
     case 2:
       FUN_100361e0(0,-1,-1,-1,-1);
       if (*(int *)(puVar3 + 0x28) < 0) {
-        FUN_100361a0(*(int *)(puVar3 + 0x24));
+        MarkTableEntryUnset_Likely(*(int *)(puVar3 + 0x24));
       }
       else {
         FUN_10035f30(*(int *)(puVar3 + 0x24),(char *)(PTR_DAT_10083d8c[*(int *)(puVar3 + 0x28) * 10]),
@@ -65,7 +65,7 @@ void __stdcall FUN_1001add0(void)
             goto LAB_1001aeff;
           }
         }
-        FUN_100361a0(*(int *)(puVar3 + 0x24) + -3);
+        MarkTableEntryUnset_Likely(*(int *)(puVar3 + 0x24) + -3);
       }
       else {
         FUN_10035f30(*(int *)(puVar3 + 0x24) + -3,(char *)(PTR_DAT_10083d8c[iVar2 * 10]),(char *)0x0,

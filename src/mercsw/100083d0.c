@@ -7,11 +7,11 @@ extern undefined DAT_101f5300[];
 extern undefined4 DAT_10215658;
 extern undefined4 PTR_DAT_100aaf68;
 extern undefined PTR_DAT_100b2cf0[];
-int __cdecl FUN_10065e40(undefined4 param_1, int param_2, int param_3);
-int * __cdecl FUN_100660e1(int param_1, int * param_2, int * param_3);
+int __cdecl ScaleRect(undefined4 param_1, int param_2, int param_3);
+int * __cdecl ScalePointBySize(int param_1, int * param_2, int * param_3);
 int __cdecl FUN_10066145(int param_1, uint param_2);
 int __cdecl FUN_10066342(undefined4 param_1, int * param_2, int param_3);
-int __cdecl FUN_10065ebf(int param_1, int param_2, int param_3);
+int __cdecl MapRectIntoRect(int param_1, int param_2, int param_3);
 undefined __cdecl FUN_10009ce8(int param_1);
 
 void __cdecl FUN_100083d0(int param_1, undefined4 * param_2)
@@ -28,7 +28,7 @@ void __cdecl FUN_100083d0(int param_1, undefined4 * param_2)
     puVar1 = (undefined4 *)*param_2;
     DAT_10215658 = param_1;
     *puVar1 = (undefined4)(DAT_101f5300);
-    FUN_10065e40((undefined4)(DAT_101f5300),(int)puVar1,(int)puVar1);
+    ScaleRect((undefined4)(DAT_101f5300),(int)puVar1,(int)puVar1);
     if (param_1 == 1) {
       puVar4 = puVar1;
       ppuVar5 = (undefined **)(PTR_DAT_100b2cf0);
@@ -45,9 +45,9 @@ void __cdecl FUN_100083d0(int param_1, undefined4 * param_2)
       puVar4 = puVar4 + 1;
       puVar6 = puVar6 + 1;
     }
-    FUN_100660e1((int)puVar1,(int *)(param_2 + 0x16),(int *)(param_2 + 0x16));
-    FUN_100660e1((int)puVar1,(int *)(param_2 + 0x18),(int *)(param_2 + 0x18));
-    FUN_100660e1((int)puVar1,(int *)(param_2 + 0x1a),(int *)(param_2 + 0x1a));
+    ScalePointBySize((int)puVar1,(int *)(param_2 + 0x16),(int *)(param_2 + 0x16));
+    ScalePointBySize((int)puVar1,(int *)(param_2 + 0x18),(int *)(param_2 + 0x18));
+    ScalePointBySize((int)puVar1,(int *)(param_2 + 0x1a),(int *)(param_2 + 0x1a));
     iVar3 = param_2[5];
     if (iVar3 != 0) {
       piVar2 = *(int **)(*(int *)(iVar3 + 4) + 4);
@@ -57,7 +57,7 @@ void __cdecl FUN_100083d0(int param_1, undefined4 * param_2)
         FUN_10066342((undefined4)(DAT_101f5300),piVar2,(int)piVar2);
       }
       else {
-        FUN_10065ebf((int)puVar1,(int)piVar2,(int)piVar2);
+        MapRectIntoRect((int)puVar1,(int)piVar2,(int)piVar2);
       }
       piVar2 = *(int **)(*(int *)(iVar3 + 4) + 8);
       *piVar2 = (int)DAT_101f5300;
@@ -66,7 +66,7 @@ void __cdecl FUN_100083d0(int param_1, undefined4 * param_2)
         FUN_10066342((undefined4)(DAT_101f5300),piVar2,(int)piVar2);
       }
       else {
-        FUN_10065ebf((int)puVar1,(int)piVar2,(int)piVar2);
+        MapRectIntoRect((int)puVar1,(int)piVar2,(int)piVar2);
       }
       **(undefined4 **)(*(int *)(iVar3 + 4) + 0xc) = (undefined4)(DAT_101f5300);
     }

@@ -6,7 +6,7 @@ int __cdecl FID_conflict___open(char * _Filename, int _OpenFlag, ...);
 int __cdecl __write(int _FileHandle, void * _Buf, uint _MaxCharCount);
 int __cdecl __close(int _FileHandle);
 
-undefined4 __cdecl FUN_10047e21(char * param_1, void * param_2)
+undefined4 __cdecl FUN_10047e21(char * param_1, void * buf)
 
 {
   char *_Filename;
@@ -22,7 +22,7 @@ undefined4 __cdecl FUN_10047e21(char * param_1, void * param_2)
     local_8 = 0xffffffff;
   }
   else {
-    __write(iVar1,param_2,0x17);
+    __write(iVar1,buf,0x17);
     __close(iVar1);
     local_8 = 0;
   }

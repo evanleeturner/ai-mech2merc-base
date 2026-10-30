@@ -10,7 +10,7 @@ extern void * DAT_100a674c;
 extern undefined DAT_100c49d0[];
 extern char s_MechWarrior_Assignment_10090244[];
 LPVOID __stdcall HeapAlloc(HANDLE, DWORD, DWORD);
-int __cdecl FUN_1000c4c0(void * param_1, int param_2, char * param_3);
+int __cdecl CenterTextAtX_Likely(void * param_1, int param_2, char * param_3);
 undefined __cdecl FUN_1001d130(int param_1);
 
 int * __cdecl FUN_1001d450(int param_1, int param_2, int param_3, int param_4)
@@ -25,7 +25,7 @@ int * __cdecl FUN_1001d450(int param_1, int param_2, int param_3, int param_4)
   int local_4;
   
   piVar4 = HeapAlloc(DAT_10098224,1,(*(int *)(param_3 + 4) + 1) * 0x70);
-  iVar5 = FUN_1000c4c0(DAT_100a674c,0xd2,s_MechWarrior_Assignment_10090244);
+  iVar5 = CenterTextAtX_Likely(DAT_100a674c,0xd2,s_MechWarrior_Assignment_10090244);
   *piVar4 = iVar5;
   piVar4[1] = param_2;
   piVar4[3] = *(int *)((int)DAT_100a674c + 0x40c) + 5;

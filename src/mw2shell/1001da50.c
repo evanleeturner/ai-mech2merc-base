@@ -6,7 +6,7 @@ extern undefined4 DAT_100a67a4;
 extern undefined4 DAT_100a67a8;
 extern char s_You_may_assign_a_max_of_2_starma_100902b4[];
 undefined4 __cdecl FUN_10018060(int param_1, int param_2);
-undefined __cdecl FUN_1005b1b0(char * param_1);
+undefined __cdecl ShowMessageDialog(char * param_1);
 
 int __stdcall FUN_1001da50(void)
 
@@ -39,6 +39,6 @@ int __stdcall FUN_1001da50(void)
     }
     return iVar2;
   }
-  FUN_1005b1b0(s_You_may_assign_a_max_of_2_starma_100902b4);
+  ShowMessageDialog(s_You_may_assign_a_max_of_2_starma_100902b4);
   return *(int *)(DAT_10083508 + 0x2df7) + 1;
 }

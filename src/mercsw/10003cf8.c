@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: MIT */
 /* mercsw 10003cf8 */
-int QuadraticFalloffPercent(int param_1)
+int ComputeVolumeFalloffPercent(int param_1)
 {
     int percent;
     int iVar2;

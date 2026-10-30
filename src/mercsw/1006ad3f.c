@@ -7,7 +7,7 @@ extern undefined4 DAT_100b38fc;
 extern undefined4 DAT_100eee60;
 extern undefined4 DAT_100eef40[];
 undefined4 __stdcall _AIL_serve_0(void);
-undefined __stdcall FUN_10002849(void);
+undefined __stdcall RefillStreamingSampleBuffers(void);
 undefined __cdecl FUN_10003742(uint param_1, int param_2, undefined4 param_3, int param_4, ushort param_5);
 
 void __stdcall FUN_1006ad3f(void)
@@ -17,7 +17,7 @@ void __stdcall FUN_1006ad3f(void)
   int local_c;
   
   _AIL_serve_0();
-  FUN_10002849();
+  RefillStreamingSampleBuffers();
   if ((DAT_100eee60 <= DAT_100b38fc) &&
      (DAT_100eee60 = DAT_100b38fc + 0x389,
      (*(ushort *)(DAT_100eef40[DAT_100adf38] + 0x14) & 0x16) == 0)) {

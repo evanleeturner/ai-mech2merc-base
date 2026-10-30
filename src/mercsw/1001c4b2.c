@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: MIT */
 /* mercsw 1001c4b2 */
-void __cdecl FUN_1001c299(int param_1, int param_2);
+void __cdecl SetCurrentNode(int param_1, int param_2);
 
 void __cdecl FUN_1001c4b2(int param_1, int param_2)
 {
@@ -16,6 +16,6 @@ void __cdecl FUN_1001c4b2(int param_1, int param_2)
         }
         local_8 = (int *)local_8[3];
     }
-    FUN_1001c299(param_1, (int)local_8);
+    SetCurrentNode(param_1, (int)local_8);
     return;
 }

@@ -3,7 +3,7 @@
 /* mercsw 10054330: Ghidra's C, repaired by tools/ghidra_repair.py */
 extern undefined4 DAT_1011515c;
 extern undefined4 PTR_DAT_100aaf68;
-int __cdecl FUN_10003d60(int param_1, int param_2);
+int __cdecl FixedMul16(int param_1, int param_2);
 undefined __cdecl FUN_1002f6e8(int param_1);
 undefined __cdecl FUN_10080919(undefined2 * param_1, int param_2);
 
@@ -35,7 +35,7 @@ undefined4 __cdecl FUN_10054330(int param_1, int param_2)
       if (*local_10 != 0) {
         for (; local_24 = piVar1, piVar1 = local_8, local_10 != (int *)0x0;
             local_10 = (int *)local_10[3]) {
-          iVar3 = FUN_10003d60(*(int *)(PTR_DAT_100aaf68 + 0xb8),*local_10);
+          iVar3 = FixedMul16(*(int *)(PTR_DAT_100aaf68 + 0xb8),*local_10);
           if (param_2 < iVar3) {
             local_8 = local_24;
             piVar1 = local_8;

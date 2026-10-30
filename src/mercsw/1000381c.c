@@ -4,7 +4,7 @@
 extern undefined4 PTR_DAT_100aaf68;
 int __cdecl FUN_10006b20(int param_1);
 
-int __cdecl FUN_1000381c(int param_1)
+int __cdecl ComputeSamplePan(int param_1)
 
 {
   int iVar1;

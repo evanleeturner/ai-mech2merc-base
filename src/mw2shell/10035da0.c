@@ -3,7 +3,7 @@
 /* mw2shell 10035da0: Ghidra's C, repaired by tools/ghidra_repair.py */
 extern undefined4 DAT_10092000;
 extern char s_Selected_critical_can_not_be_rem_100938d4[];
-undefined __cdecl FUN_1005b1b0(char * param_1);
+undefined __cdecl ShowMessageDialog(char * param_1);
 undefined __cdecl FUN_100315b0(int param_1);
 
 void __cdecl FUN_10035da0(int param_1)
@@ -18,7 +18,7 @@ void __cdecl FUN_10035da0(int param_1)
      -1 < iVar1)) {
     iVar2 = (iVar1 / 100) * 100;
     if ((0x1c83 < iVar2) && (iVar2 < 8000)) {
-      FUN_1005b1b0(s_Selected_critical_can_not_be_rem_100938d4);
+      ShowMessageDialog(s_Selected_critical_can_not_be_rem_100938d4);
       return;
     }
     FUN_100315b0(iVar1);

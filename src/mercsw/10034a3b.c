@@ -6,7 +6,7 @@ extern undefined4 DAT_100adc24;
 extern undefined4 DAT_100c6b8c;
 extern undefined4 DAT_100c6b90;
 extern undefined4 DAT_10114e20;
-int __cdecl FUN_10003d60(int param_1, int param_2);
+int __cdecl FixedMul16(int param_1, int param_2);
 undefined __cdecl FUN_1003517a(int param_1, int param_2, int param_3, int * param_4);
 undefined __cdecl FUN_10016cdd(int * param_1, int param_2, int param_3, int param_4, int param_5, int param_6);
 
@@ -20,13 +20,13 @@ void __cdecl FUN_10034a3b(undefined4 param_1, undefined4 param_2, int param_3, i
   
   iVar3 = DAT_100adc20;
   piVar1 = *(int **)(DAT_10114e20 + 0xa4);
-  iVar2 = FUN_10003d60(DAT_100c6b8c,(param_3 + 0x168) % 0x168);
+  iVar2 = FixedMul16(DAT_100c6b8c,(param_3 + 0x168) % 0x168);
   iVar3 = iVar3 - iVar2;
   if (iVar3 < 0) {
-    local_8 = FUN_10003d60(DAT_100c6b8c,0x168);
+    local_8 = FixedMul16(DAT_100c6b8c,0x168);
   }
   else {
-    local_8 = FUN_10003d60(DAT_100c6b8c,0x168);
+    local_8 = FixedMul16(DAT_100c6b8c,0x168);
     local_8 = -local_8;
   }
   local_8 = iVar3 + local_8;

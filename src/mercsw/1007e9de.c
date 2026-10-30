@@ -15,9 +15,9 @@ extern undefined DAT_10215690[];
 undefined __cdecl FUN_10026f0b(int * param_1);
 undefined __cdecl FUN_1002f322(int param_1, undefined4 * param_2, undefined4 * param_3, undefined4 * param_4);
 undefined4 __cdecl FUN_10002570(uint param_1, int param_2);
-undefined4 __cdecl FUN_1003c190(int param_1, int param_2, int param_3, int param_4);
-undefined __cdecl FUN_1000fef4(uint * param_1, uint * param_2, uint * param_3);
-int __cdecl FUN_10003d60(int param_1, int param_2);
+undefined4 __cdecl IsWithinRadius3_Likely(int param_1, int param_2, int param_3, int param_4);
+undefined __cdecl NormalizeVec3(uint * param_1, uint * param_2, uint * param_3);
+int __cdecl FixedMul16(int param_1, int param_2);
 undefined __stdcall FUN_1004fed5(void);
 undefined __cdecl FUN_1006b2cc(int * param_1);
 
@@ -60,17 +60,17 @@ void __cdecl FUN_1007e9de(int * param_1)
       local_3c = local_2c - local_28;
       local_14 = local_34 - local_30;
       local_24 = FUN_10002570(local_8[0xee] * DAT_100b3904,0x697e98);
-      iVar1 = FUN_1003c190(local_38,local_3c,local_14,local_24);
+      iVar1 = IsWithinRadius3_Likely(local_38,local_3c,local_14,local_24);
       if (iVar1 == 0) {
         local_38 = local_20;
         local_3c = local_2c;
         local_14 = local_34;
       }
       else {
-        FUN_1000fef4(&local_38,&local_3c,&local_14);
-        local_38 = FUN_10003d60(local_38,local_24);
-        local_3c = FUN_10003d60(local_3c,local_24);
-        local_14 = FUN_10003d60(local_14,local_24);
+        NormalizeVec3(&local_38,&local_3c,&local_14);
+        local_38 = FixedMul16(local_38,local_24);
+        local_3c = FixedMul16(local_3c,local_24);
+        local_14 = FixedMul16(local_14,local_24);
       }
       local_8[10] = local_38;
       local_8[0x12] = local_3c;

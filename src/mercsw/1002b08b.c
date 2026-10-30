@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: MIT */
 /* mercsw 1002b08b */
-int __cdecl ClampedAdd1024(int param_1, int param_2, int matchSign)
+int __cdecl ClampedAdd1024_Likely(int param_1, int param_2, int matchSign)
 {
     if ((matchSign != 0) &&
         ((((param_2 < 0) - 1 & 2) - 1) != (((param_1 < 0) - 1 & 2) - 1))) {

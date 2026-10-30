@@ -12,7 +12,7 @@ extern HINSTANCE DAT_100d08dc;
 extern HWND DAT_100d08e8;
 int __stdcall DialogBoxParamA(HINSTANCE, const void *, HWND, void *, LONG);
 
-void __cdecl FUN_1005b1b0(char * param_1)
+void __cdecl ShowMessageDialog(char * param_1)
 
 {
   char cVar1;

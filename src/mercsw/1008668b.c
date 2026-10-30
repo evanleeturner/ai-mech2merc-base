@@ -9,7 +9,7 @@ extern ushort * DAT_100c9054;
 extern char s_CACHE_FULL____Nothing_to_purge___100ba8c8[];
 extern char s_Memory_running_low__1_____strang_100ba920[];
 extern char s_Memory_running_low__2_____strang_100ba8ec[];
-ushort * __cdecl FUN_1008628d(uint param_1, int * param_2);
+ushort * __cdecl FindCacheEntry(uint param_1, int * param_2);
 undefined __cdecl FUN_10085fb3(int param_1);
 undefined __cdecl FUN_10086336(ushort * param_1);
 undefined4 __cdecl FUN_1005be24(char * param_1, int param_2, int param_3, int param_4);
@@ -28,7 +28,7 @@ ushort * __cdecl FUN_1008668b(int param_1, uint param_2, int * param_3)
     puVar1 = (ushort *)0x0;
   }
   else {
-    puVar1 = FUN_1008628d(param_2,param_3);
+    puVar1 = FindCacheEntry(param_2,param_3);
     if (puVar1 == (ushort *)0x0) {
       if (999 < DAT_100c9050) {
         if (DAT_100c9054 == (ushort *)0x0) {

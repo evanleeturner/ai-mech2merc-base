@@ -2,7 +2,7 @@
 /* mercsw 100297b4 */
 /* mercsw 100297b4: Ghidra's C, repaired by tools/ghidra_repair.py */
 int __cdecl FUN_1002a132(int param_1);
-int __cdecl FUN_10003d60(int param_1, int param_2);
+int __cdecl FixedMul16(int param_1, int param_2);
 
 int __cdecl FUN_100297b4(int param_1)
 
@@ -17,7 +17,7 @@ int __cdecl FUN_100297b4(int param_1)
       *(undefined4 *)(*(int *)(param_1 + 0x4c) + 0xc) = 0xfccccccd;
     }
     else {
-      iVar2 = FUN_10003d60(0x3333333,((int)((unsigned int)(iVar2) << (0x10))) / 0x2d);
+      iVar2 = FixedMul16(0x3333333,((int)((unsigned int)(iVar2) << (0x10))) / 0x2d);
       *(int *)(*(int *)(param_1 + 0x4c) + 0xc) = iVar2;
     }
   }

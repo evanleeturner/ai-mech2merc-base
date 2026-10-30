@@ -5,7 +5,7 @@ extern int * DAT_100a67a4;
 extern int * DAT_100a67e4;
 undefined4 __cdecl FUN_10018060(int param_1, int param_2);
 undefined __stdcall FUN_1000be10(void);
-undefined4 __cdecl FUN_10017df0(int * param_1, undefined4 param_2);
+undefined4 __cdecl AppendToCollection(int * param_1, undefined4 param_2);
 undefined __cdecl FUN_100180f0(int * param_1, char param_2);
 
 void __stdcall FUN_1000c250(void)
@@ -22,7 +22,7 @@ void __stdcall FUN_1000c250(void)
       iVar1 = FUN_10018060((int)DAT_100a67e4,iVar1);
       uVar2 = FUN_1000be10();
       *(undefined4 *)(iVar1 + 0x24) = uVar2;
-      FUN_10017df0(DAT_100a67a4,iVar1);
+      AppendToCollection(DAT_100a67a4,iVar1);
       iVar1 = iVar3;
     } while (iVar3 < DAT_100a67e4[1]);
   }

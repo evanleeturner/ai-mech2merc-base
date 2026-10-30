@@ -6,7 +6,7 @@ extern undefined4 DAT_100a50f0;
 extern void * DAT_100c61fc;
 size_t __cdecl _fread(void * _DstBuf, size_t _ElementSize, size_t _Count, FILE * _File);
 
-void __cdecl FUN_100115d0(FILE * param_1)
+void __cdecl FUN_100115d0(FILE * file)
 
 {
   int iVar1;
@@ -30,10 +30,10 @@ void __cdecl FUN_100115d0(FILE * param_1)
   }
   iVar3 = 0;
   DAT_100a50f0 = iVar1;
-  _fread(DAT_100c61fc,8,1,param_1);
+  _fread(DAT_100c61fc,8,1,file);
   do {
     if (*(int *)((int)DAT_100c61fc + iVar3 + 8) != -1) {
-      _fread((void *)((int)DAT_100c61fc + iVar3 + 8),0x20,1,param_1);
+      _fread((void *)((int)DAT_100c61fc + iVar3 + 8),0x20,1,file);
     }
     iVar3 = iVar3 + 0x20;
   } while (iVar3 < 0x100);

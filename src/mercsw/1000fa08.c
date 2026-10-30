@@ -7,7 +7,7 @@ extern undefined DAT_101ec78c[];
 extern undefined DAT_101ec794[];
 undefined4 __cdecl FUN_1004d5e3(int param_1);
 undefined __cdecl FUN_1002f322(int param_1, undefined4 * param_2, undefined4 * param_3, undefined4 * param_4);
-int __cdecl FUN_1000fc30(int param_1, int param_2, int param_3);
+int __cdecl ApproxLength3_Likely(int param_1, int param_2, int param_3);
 int __cdecl FUN_10051f43(int param_1);
 
 undefined4 __cdecl FUN_1000fa08(int param_1)
@@ -37,7 +37,7 @@ undefined4 __cdecl FUN_1000fa08(int param_1)
       iVar2 = *(int *)(param_1 + 0x50) - local_10;
       iVar3 = *(int *)(param_1 + 0x54) - local_14;
       local_8 = *(int *)(param_1 + 0x58) - local_1c;
-      local_c = FUN_1000fc30(iVar2,iVar3,local_8);
+      local_c = ApproxLength3_Likely(iVar2,iVar3,local_8);
       if (local_c < 0xc351) {
         if (local_18[0x15] < 0) {
           iVar4 = local_c + -0x9c4;

@@ -6,8 +6,8 @@ int __cdecl FUN_10006bbb(uint param_1);
 undefined __cdecl FUN_1002f668(int param_1, int param_2, int param_3, int param_4, uint param_5);
 undefined __cdecl FUN_100640ee(int param_1, undefined4 * param_2, undefined4 * param_3, undefined4 * param_4);
 int __cdecl FUN_10051f43(int param_1);
-undefined __cdecl FUN_1000fef4(uint * param_1, uint * param_2, uint * param_3);
-int __cdecl FUN_10003d60(int param_1, int param_2);
+undefined __cdecl NormalizeVec3(uint * param_1, uint * param_2, uint * param_3);
+int __cdecl FixedMul16(int param_1, int param_2);
 undefined __cdecl FUN_1002f37a(int param_1, undefined4 param_2, undefined4 param_3, undefined4 param_4);
 undefined __cdecl FUN_1002f3a7(int param_1, int param_2, int param_3, int param_4);
 
@@ -41,30 +41,30 @@ void __cdecl FUN_1006416e(int param_1, int param_2, uint param_3, int param_4, i
     local_34 = -param_5;
     local_38 = 0;
     local_20 = param_3;
-    FUN_1000fef4(&local_34,&local_38,&local_20);
-    iVar1 = FUN_10003d60(local_24,local_34);
+    NormalizeVec3(&local_34,&local_38,&local_20);
+    iVar1 = FixedMul16(local_24,local_34);
     local_8 = local_8 + iVar1;
-    iVar1 = FUN_10003d60(local_24,local_20);
+    iVar1 = FixedMul16(local_24,local_20);
     local_10 = local_10 + iVar1;
-    local_28 = FUN_10003d60(param_4,local_20);
-    iVar1 = FUN_10003d60(local_20,param_3);
-    local_2c = FUN_10003d60(param_5,local_34);
+    local_28 = FixedMul16(param_4,local_20);
+    iVar1 = FixedMul16(local_20,param_3);
+    local_2c = FixedMul16(param_5,local_34);
     local_2c = iVar1 + local_2c;
-    local_30 = FUN_10003d60(local_34,param_4);
+    local_30 = FixedMul16(local_34,param_4);
     local_30 = -local_30;
-    iVar1 = FUN_10003d60(local_24,local_28);
+    iVar1 = FixedMul16(local_24,local_28);
     local_8 = local_8 + iVar1;
-    iVar1 = FUN_10003d60(local_24,local_2c);
+    iVar1 = FixedMul16(local_24,local_2c);
     local_c = local_c + iVar1;
-    iVar1 = FUN_10003d60(local_24,local_30);
+    iVar1 = FixedMul16(local_24,local_30);
     local_10 = local_10 + iVar1;
   }
   FUN_1002f37a(param_2,local_8,local_c,local_10);
   if ((*(byte *)(param_7 + 8) & 0x40) == 0) {
     local_1c = *(int *)(*(int *)(param_2 + 0x6c) + 0x40) * 2;
-    iVar1 = FUN_10003d60(param_3,local_1c);
-    iVar2 = FUN_10003d60(param_4,local_1c);
-    iVar3 = FUN_10003d60(param_5,local_1c);
+    iVar1 = FixedMul16(param_3,local_1c);
+    iVar2 = FixedMul16(param_4,local_1c);
+    iVar3 = FixedMul16(param_5,local_1c);
     FUN_1002f3a7(param_2,iVar1,iVar2,iVar3);
   }
   return;

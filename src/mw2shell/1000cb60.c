@@ -12,7 +12,7 @@ extern undefined4 DAT_100a67d8;
 extern undefined4 DAT_100a67dc;
 extern undefined4 DAT_100a67e0;
 undefined4 __cdecl FUN_10018060(int param_1, int param_2);
-undefined4 __cdecl FUN_10017df0(int * param_1, undefined4 param_2);
+undefined4 __cdecl AppendToCollection(int * param_1, undefined4 param_2);
 
 void __stdcall FUN_1000cb60(void)
 
@@ -27,7 +27,7 @@ void __stdcall FUN_1000cb60(void)
     do {
       iVar3 = iVar4 + 1;
       uVar1 = FUN_10018060(DAT_100a67bc,iVar4);
-      FUN_10017df0(DAT_100a67b4,uVar1);
+      AppendToCollection(DAT_100a67b4,uVar1);
       iVar4 = iVar3;
     } while (iVar3 < *(int *)(DAT_100a67bc + 4));
   }
@@ -36,7 +36,7 @@ void __stdcall FUN_1000cb60(void)
     do {
       iVar3 = iVar4 + 1;
       uVar1 = FUN_10018060(DAT_100a67c0,iVar4);
-      FUN_10017df0(DAT_100a67b4,uVar1);
+      AppendToCollection(DAT_100a67b4,uVar1);
       iVar4 = iVar3;
     } while (iVar3 < *(int *)(DAT_100a67c0 + 4));
   }
@@ -45,7 +45,7 @@ void __stdcall FUN_1000cb60(void)
     do {
       iVar3 = iVar4 + 1;
       uVar1 = FUN_10018060(DAT_100a67c4,iVar4);
-      FUN_10017df0(DAT_100a67b4,uVar1);
+      AppendToCollection(DAT_100a67b4,uVar1);
       iVar4 = iVar3;
     } while (iVar3 < *(int *)(DAT_100a67c4 + 4));
   }
@@ -54,7 +54,7 @@ void __stdcall FUN_1000cb60(void)
     do {
       piVar2 = (int *)FUN_10018060(DAT_100a67c8,iVar4);
       if (*piVar2 != 9) {
-        FUN_10017df0(DAT_100a67b4,(undefined4)(piVar2));
+        AppendToCollection(DAT_100a67b4,(undefined4)(piVar2));
       }
       iVar4 = iVar4 + 1;
     } while (iVar4 < *(int *)(DAT_100a67c8 + 4));
@@ -64,7 +64,7 @@ void __stdcall FUN_1000cb60(void)
     do {
       iVar3 = iVar4 + 1;
       uVar1 = FUN_10018060(DAT_100a67d4,iVar4);
-      FUN_10017df0(DAT_100a67cc,uVar1);
+      AppendToCollection(DAT_100a67cc,uVar1);
       iVar4 = iVar3;
     } while (iVar3 < *(int *)(DAT_100a67d4 + 4));
   }
@@ -73,7 +73,7 @@ void __stdcall FUN_1000cb60(void)
     do {
       iVar3 = iVar4 + 1;
       uVar1 = FUN_10018060(DAT_100a67d8,iVar4);
-      FUN_10017df0(DAT_100a67cc,uVar1);
+      AppendToCollection(DAT_100a67cc,uVar1);
       iVar4 = iVar3;
     } while (iVar3 < *(int *)(DAT_100a67d8 + 4));
   }
@@ -82,7 +82,7 @@ void __stdcall FUN_1000cb60(void)
     do {
       iVar3 = iVar4 + 1;
       uVar1 = FUN_10018060(DAT_100a67dc,iVar4);
-      FUN_10017df0(DAT_100a67cc,uVar1);
+      AppendToCollection(DAT_100a67cc,uVar1);
       iVar4 = iVar3;
     } while (iVar3 < *(int *)(DAT_100a67dc + 4));
   }
@@ -91,7 +91,7 @@ void __stdcall FUN_1000cb60(void)
     do {
       iVar3 = iVar4 + 1;
       uVar1 = FUN_10018060(DAT_100a67e0,iVar4);
-      FUN_10017df0(DAT_100a67cc,uVar1);
+      AppendToCollection(DAT_100a67cc,uVar1);
       iVar4 = iVar3;
     } while (iVar3 < *(int *)(DAT_100a67e0 + 4));
   }

@@ -5,7 +5,7 @@ extern undefined4 DAT_100aae58;
 extern undefined4 DAT_100aae5c;
 extern undefined4 DAT_100aae64;
 extern int DAT_100aae68;
-extern undefined4 DAT_100aafbc;
+extern undefined4 g_disabled100aafbc_Likely;
 extern undefined4 DAT_100b0f18;
 extern undefined4 DAT_100b0f1c;
 extern undefined4 DAT_100c96bc;
@@ -71,7 +71,7 @@ void __cdecl FUN_10017f0b(int param_1, int param_2, int param_3, int param_4, in
   (void)local_478;
   (void)local_470;
   FUN_10035f13();
-  uVar2 = DAT_100aafbc;
+  uVar2 = g_disabled100aafbc_Likely;
   DAT_100b0f18 = 0;
   DAT_100b0f1c = 0;
   DAT_1011515c = 1;
@@ -102,7 +102,7 @@ void __cdecl FUN_10017f0b(int param_1, int param_2, int param_3, int param_4, in
   local_4b4 = 0;
   local_4f8 = 0;
   local_53c = 0;
-  DAT_100aafbc = 0;
+  g_disabled100aafbc_Likely = 0;
   local_508 = local_54c;
   local_4cc = local_510;
   local_488 = local_554;
@@ -140,6 +140,6 @@ void __cdecl FUN_10017f0b(int param_1, int param_2, int param_3, int param_4, in
     }
     FUN_1001793d(param_3,(int *)(DAT_10115100),local_10,0);
   }
-  DAT_100aafbc = uVar2;
+  g_disabled100aafbc_Likely = uVar2;
   return;
 }

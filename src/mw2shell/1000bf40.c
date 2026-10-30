@@ -5,9 +5,9 @@ enum { false = 0, true = 1 };
 extern undefined PTR_DAT_10083d88[];
 extern undefined PTR_DAT_10083d8c[];
 char * __cdecl _strncpy(char * _Dest, char * _Source, size_t _Count);
-char * __cdecl FUN_1005bbb0(char * param_1);
+char * __cdecl FUN_1005bbb0(char * source);
 
-undefined ** __cdecl FUN_1000bf40(char * param_1)
+undefined ** __cdecl FUN_1000bf40(char * source)
 
 {
   byte bVar1;
@@ -23,7 +23,7 @@ undefined ** __cdecl FUN_1000bf40(char * param_1)
   (void)local_1d;
   iVar5 = 0;
   ppuVar6 = (undefined **)(PTR_DAT_10083d8c);
-  _strncpy(local_20,param_1,3);
+  _strncpy(local_20,source,3);
   local_1d = 0;
   do {
     pbVar2 = (byte *)FUN_1005bbb0((char *)(*ppuVar6));

@@ -7,7 +7,7 @@ extern undefined DAT_100a7bec[];
 extern undefined DAT_100a7bf0[];
 extern undefined4 DAT_100b3904;
 extern undefined4 DAT_100eef40[];
-undefined4 __cdecl FUN_1003c190(int param_1, int param_2, int param_3, int param_4);
+undefined4 __cdecl IsWithinRadius3_Likely(int param_1, int param_2, int param_3, int param_4);
 
 void __cdecl FUN_100639ad(int * param_1)
 
@@ -39,9 +39,9 @@ void __cdecl FUN_100639ad(int * param_1)
       iVar2 = *(int *)(*param_1 + 0x50) - *(int *)(*param_1 + 200);
       iVar3 = *(int *)(*param_1 + 0x54) - *(int *)(*param_1 + 0xcc);
       iVar4 = *(int *)(*param_1 + 0x58) - *(int *)(*param_1 + 0xd0);
-      iVar5 = FUN_1003c190(iVar2,iVar3,iVar4,*(int *)(DAT_100a7bec + iVar6));
+      iVar5 = IsWithinRadius3_Likely(iVar2,iVar3,iVar4,*(int *)(DAT_100a7bec + iVar6));
       if ((iVar5 == 0) &&
-         (iVar6 = FUN_1003c190(iVar2,iVar3,iVar4,*(int *)(DAT_100a7bf0 + iVar6)), iVar6 != 0)) {
+         (iVar6 = IsWithinRadius3_Likely(iVar2,iVar3,iVar4,*(int *)(DAT_100a7bf0 + iVar6)), iVar6 != 0)) {
         bVar1 = true;
         local_18 = *(int *)(*param_1 + 0xd4) -
                    (*(int *)(*param_1 + 0x60) % 0x1680000 + 0x1680000) % 0x1680000;

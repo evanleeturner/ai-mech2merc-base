@@ -4,7 +4,7 @@
 extern HANDLE DAT_100adf74;
 extern undefined DAT_100b3940[];
 LPVOID __stdcall HeapAlloc(HANDLE, DWORD, DWORD);
-int * __cdecl FUN_100660e1(int param_1, int * param_2, int * param_3);
+int * __cdecl ScalePointBySize(int param_1, int * param_2, int * param_3);
 undefined4 __cdecl FUN_1005aae4(int param_1);
 undefined4 __cdecl FUN_1005aaf7(int param_1, int param_2);
 undefined __cdecl FUN_1005acaa(int * param_1, int param_2, int param_3, int param_4, byte * param_5, int param_6);
@@ -69,7 +69,7 @@ void __cdecl FUN_100668b6(int * param_1, char * param_2, int param_3)
         pbVar7 = pbVar7 + 1;
       }
       local_10 = local_14;
-      FUN_100660e1((int)param_1,(int *)DAT_100b3940,&local_2c);
+      ScalePointBySize((int)param_1,(int *)DAT_100b3940,&local_2c);
       local_c = param_1[3] - param_1[1];
       local_8 = param_1[4] - param_1[2];
       local_18 = FUN_1005aae4(param_3);

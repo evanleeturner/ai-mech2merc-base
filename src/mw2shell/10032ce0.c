@@ -4,7 +4,7 @@
 extern undefined4 DAT_10092000;
 extern char s_Heat_sinks_have_been_downgraded__1009368c[];
 extern char s_No_Heat_sinks_to_downgrade__Ok_1009366c[];
-undefined __cdecl FUN_1005b1b0(char * param_1);
+undefined __cdecl ShowMessageDialog(char * param_1);
 
 void __stdcall FUN_10032ce0(void)
 
@@ -50,10 +50,10 @@ void __stdcall FUN_10032ce0(void)
     local_c = local_c + 1;
   } while (local_10 < 0x60);
   if (local_8 == 0) {
-    FUN_1005b1b0(s_No_Heat_sinks_to_downgrade__Ok_1009366c);
+    ShowMessageDialog(s_No_Heat_sinks_to_downgrade__Ok_1009366c);
     return;
   }
-  FUN_1005b1b0(s_Heat_sinks_have_been_downgraded__1009368c);
+  ShowMessageDialog(s_Heat_sinks_have_been_downgraded__1009368c);
   *(undefined4 *)(DAT_10092000 + 0x228) = 0;
   return;
 }

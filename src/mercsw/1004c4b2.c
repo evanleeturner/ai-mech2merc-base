@@ -4,7 +4,7 @@
 enum { false = 0, true = 1 };
 undefined __cdecl FUN_10083a59(uint param_1, undefined4 param_2, uint param_3, int * param_4, undefined4 * param_5, uint * param_6, int * param_7);
 undefined __cdecl FUN_10006b9a(int param_1);
-int __cdecl FUN_10003d60(int param_1, int param_2);
+int __cdecl FixedMul16(int param_1, int param_2);
 int __cdecl FUN_10006b20(int param_1);
 int __cdecl FUN_100142b4(int param_1, int param_2, int param_3);
 
@@ -29,10 +29,10 @@ undefined4 __cdecl FUN_1004c4b2(int param_1, int param_2, int param_3, int param
   local_8 = (int)local_14 / 1000;
   iVar1 = FUN_10006b9a(local_10);
   iVar2 = FUN_10006b9a(local_24);
-  iVar1 = FUN_10003d60(iVar2 * 1000,iVar1);
+  iVar1 = FixedMul16(iVar2 * 1000,iVar1);
   iVar2 = FUN_10006b9a(local_10);
   iVar3 = FUN_10006b20(local_24);
-  iVar2 = FUN_10003d60(iVar3 * 1000,iVar2);
+  iVar2 = FixedMul16(iVar3 * 1000,iVar2);
   iVar3 = FUN_10006b20(local_10);
   local_20 = 0;
   while( true ) {

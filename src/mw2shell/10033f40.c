@@ -19,12 +19,12 @@ extern int DAT_100a67c4;
 extern int DAT_100a67c8;
 extern undefined DAT_100c49d0[];
 undefined __cdecl FUN_10017ff0(int param_1);
-int __cdecl FUN_1000cd20(int param_1);
+int __cdecl CountDistinctEntryKeys_Likely(int param_1);
 LPVOID __stdcall HeapAlloc(HANDLE, DWORD, DWORD);
 undefined4 __cdecl FUN_10018060(int param_1, int param_2);
-undefined4 __cdecl FUN_10050490(int param_1);
+undefined4 __cdecl GetFieldAtOffset4(int param_1);
 
-undefined4 * __cdecl FUN_10033f40(int param_1)
+undefined4 * __cdecl BuildCountedListRows_Likely(int param_1)
 
 {
   undefined4 *puVar1;
@@ -43,7 +43,7 @@ undefined4 * __cdecl FUN_10033f40(int param_1)
     return (undefined4 *)0x0;
   }
   FUN_10017ff0(param_1);
-  iVar2 = FUN_1000cd20(param_1);
+  iVar2 = CountDistinctEntryKeys_Likely(param_1);
   puVar3 = HeapAlloc(DAT_10098224,1,iVar2 * 0xa8 + 0x118);
   *puVar3 = 0x1cc;
   local_c = 1;
@@ -136,7 +136,7 @@ undefined4 * __cdecl FUN_10033f40(int param_1)
         puVar1[9] = *piVar4;
         puVar1[10] = iVar2;
         puVar1[0xb] = 0xffffffff;
-        uVar6 = FUN_10050490((int)piVar4);
+        uVar6 = GetFieldAtOffset4((int)piVar4);
         puVar1[0xc] = uVar6;
         puVar1[0xd] = 0xffffffff;
         puVar1[8] = (undefined4)(LAB_100347e0);
@@ -165,7 +165,7 @@ undefined4 * __cdecl FUN_10033f40(int param_1)
         puVar1[9] = *piVar4;
         puVar1[10] = iVar2;
         puVar1[0xb] = 0xffffffff;
-        uVar6 = FUN_10050490((int)piVar4);
+        uVar6 = GetFieldAtOffset4((int)piVar4);
         puVar1[0xc] = uVar6;
         puVar1[0xd] = 0xffffffff;
         puVar1[8] = 0;
@@ -181,7 +181,7 @@ undefined4 * __cdecl FUN_10033f40(int param_1)
         puVar1[9] = *piVar4;
         puVar1[10] = iVar2;
         puVar1[0xb] = 0xffffffff;
-        uVar6 = FUN_10050490((int)piVar4);
+        uVar6 = GetFieldAtOffset4((int)piVar4);
         local_10 = local_10 + 3;
         puVar1[0xc] = uVar6;
         puVar1[0xd] = 0xffffffff;

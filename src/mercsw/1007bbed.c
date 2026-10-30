@@ -6,17 +6,17 @@ extern HANDLE DAT_100adf74;
 extern undefined4 DAT_100af17c;
 char * __cdecl _strncpy(char * _Dest, char * _Source, size_t _Count);
 int __cdecl FUN_1007b9d2(uint param_1, char * param_2);
-ushort * __cdecl FUN_1008668b(int param_1, uint param_2, int * param_3);
-int __cdecl FUN_1001e8a8(int param_1, char * param_2, ushort param_3);
+ushort * __cdecl FUN_1008668b(int param_1, uint param_2, int * source);
+int __cdecl FUN_1001e8a8(int param_1, char * param_2, ushort source);
 char * __cdecl _strncat(char * _Dest, char * _Source, size_t _Count);
 undefined4 * __cdecl FUN_100480d9(char * param_1);
-int __cdecl FUN_10047b36(char * param_1, SIZE_T * param_2, int * param_3, int * param_4);
+int __cdecl FUN_10047b36(char * param_1, SIZE_T * param_2, int * source, int * param_4);
 int __cdecl __close(int _FileHandle);
 int __cdecl FUN_100814bb(int param_1, int param_2);
 undefined __cdecl FUN_1008664f(uint param_1, int * param_2);
 int __stdcall HeapFree(HANDLE, DWORD, LPVOID);
 
-ushort * __cdecl FUN_1007bbed(short * param_1, int * param_2, char * param_3, uint param_4, uint * param_5, int * param_6)
+ushort * __cdecl FUN_1007bbed(short * param_1, int * param_2, char * source, uint param_4, uint * param_5, int * param_6)
 
 {
   uint uVar1;
@@ -58,7 +58,7 @@ ushort * __cdecl FUN_1007bbed(short * param_1, int * param_2, char * param_3, ui
   if (local_18 == (ushort *)0x0) {
     local_14 = 0xffffffff;
     local_20 = 0;
-    _strncat(local_28,param_3,4);
+    _strncat(local_28,source,4);
     piVar8 = (int *)0x0;
     ppuVar7 = &local_18;
     puVar6 = param_5;

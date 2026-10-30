@@ -3,7 +3,7 @@
 /* mw2shell 1000d3d0: Ghidra's C, repaired by tools/ghidra_repair.py */
 int __thiscall FUN_10050b20(void * this, char * param_1);
 
-char * __cdecl FUN_1000d3d0(char * param_1, void * param_2, int param_3)
+char * __cdecl SkipFirstWordIfOverLimit_Likely(char * param_1, void * param_2, int param_3)
 
 {
   char cVar1;

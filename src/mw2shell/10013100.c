@@ -7,7 +7,7 @@ undefined4 __thiscall FUN_10012590(void * this, int param_1, int param_2, int pa
 undefined4 __cdecl FUN_10065b64(int * param_1, int param_2, int param_3, int param_4, int param_5);
 undefined __thiscall FUN_100124d0(void * this, int param_1, int param_2, int param_3, int param_4);
 
-void __thiscall FUN_10013100(void * this, int param_1, int param_2, int param_3, int param_4, int param_5, int param_6)
+void __thiscall CallGatedBetweenPrePostCalls_Likely(void * this, int param_1, int param_2, int param_3, int param_4, int param_5, int param_6)
 
 {
   int iVar1;

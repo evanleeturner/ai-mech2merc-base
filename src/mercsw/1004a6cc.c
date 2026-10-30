@@ -6,10 +6,10 @@ extern undefined4 DAT_100eef40[];
 extern undefined DAT_100ef030[];
 extern undefined DAT_100ef034[];
 undefined __cdecl FUN_1000dde1(int param_1, undefined4 * param_2, undefined4 * param_3, undefined4 * param_4);
-int __cdecl FUN_1000fc30(int param_1, int param_2, int param_3);
+int __cdecl ApproxLength3_Likely(int param_1, int param_2, int param_3);
 undefined4 __cdecl FUN_10002570(uint param_1, int param_2);
-undefined __cdecl FUN_1000fef4(uint * param_1, uint * param_2, uint * param_3);
-int __cdecl FUN_10003d60(int param_1, int param_2);
+undefined __cdecl NormalizeVec3(uint * param_1, uint * param_2, uint * param_3);
+int __cdecl FixedMul16(int param_1, int param_2);
 undefined __stdcall FUN_10006d3e(void);
 int __cdecl FUN_10006bbb(uint param_1);
 undefined __cdecl FUN_1002f668(int param_1, int param_2, int param_3, int param_4, uint param_5);
@@ -67,7 +67,7 @@ void __cdecl FUN_1004a6cc(int param_1, int param_2, int param_3, int param_4)
   local_18 = local_34 - param_2;
   local_14 = local_8 - param_3;
   local_1c = local_c - param_4;
-  local_24 = FUN_1000fc30(local_18,local_14,local_1c);
+  local_24 = ApproxLength3_Likely(local_18,local_14,local_1c);
   if (local_24 < 0x65) {
     *(uint *)(param_1 + 0x3c) = *(uint *)(param_1 + 0x3c) | 0x8000;
   }
@@ -77,7 +77,7 @@ void __cdecl FUN_1004a6cc(int param_1, int param_2, int param_3, int param_4)
   local_28 = *(uint *)(param_1 + 0xc);
   local_2c = *(uint *)(param_1 + 0x10);
   local_30 = *(uint *)(param_1 + 0x14);
-  FUN_1000fef4(&local_28,&local_2c,&local_30);
+  NormalizeVec3(&local_28,&local_2c,&local_30);
   if ((*(byte *)(param_1 + 4) & 0x10) == 0) {
     *(uint *)(param_1 + 0x18) = local_18 - local_28;
     *(uint *)(param_1 + 0x1c) = local_14 - local_2c;
@@ -85,9 +85,9 @@ void __cdecl FUN_1004a6cc(int param_1, int param_2, int param_3, int param_4)
   }
   else {
     iVar1 = FUN_10002570(DAT_100b3904,0x2d4);
-    iVar2 = FUN_10003d60((local_18 - local_28) - *(int *)(param_1 + 0x18),iVar1);
-    iVar3 = FUN_10003d60((local_14 - local_2c) - *(int *)(param_1 + 0x1c),iVar1);
-    iVar1 = FUN_10003d60((local_1c - local_30) - *(int *)(param_1 + 0x20),iVar1);
+    iVar2 = FixedMul16((local_18 - local_28) - *(int *)(param_1 + 0x18),iVar1);
+    iVar3 = FixedMul16((local_14 - local_2c) - *(int *)(param_1 + 0x1c),iVar1);
+    iVar1 = FixedMul16((local_1c - local_30) - *(int *)(param_1 + 0x20),iVar1);
     *(int *)(param_1 + 0x18) = *(int *)(param_1 + 0x18) + iVar2;
     *(int *)(param_1 + 0x1c) = *(int *)(param_1 + 0x1c) + iVar3;
     *(int *)(param_1 + 0x20) = *(int *)(param_1 + 0x20) + iVar1;

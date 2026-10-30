@@ -8,7 +8,7 @@ extern undefined DAT_100bdf94[];
 extern undefined DAT_100bed74[];
 extern undefined4 DAT_100bfd98[];
 extern char s_keyboard_1009fe94[];
-int __cdecl FUN_100576a0(int param_1);
+int __cdecl EntryAddress120_Likely(int param_1);
 undefined __cdecl FUN_10053fc0(int param_1, uint * param_2);
 
 void __stdcall FUN_10053cf0(void)
@@ -24,7 +24,7 @@ void __stdcall FUN_10053cf0(void)
   
   iVar5 = 0;
   do {
-    iVar2 = FUN_100576a0(iVar5);
+    iVar2 = EntryAddress120_Likely(iVar5);
     if (iVar2 == 0) {
 LAB_10053d40:
       DAT_100bfd98[iVar5] = 0;
@@ -60,7 +60,7 @@ LAB_10053d2f:
         iVar2 = *piVar6;
         if (-1 < iVar2) {
           DAT_1009c558 = iVar2;
-          iVar2 = FUN_100576a0(iVar2);
+          iVar2 = EntryAddress120_Likely(iVar2);
           if (iVar2 == 0) {
             FUN_10053fc0(iVar5,(uint *)(piVar6 + -1));
           }
@@ -74,7 +74,7 @@ LAB_10053d2f:
       iVar5 = 0;
       DAT_1009c6a8 = 0;
       do {
-        iVar2 = FUN_100576a0(iVar5);
+        iVar2 = EntryAddress120_Likely(iVar5);
         if (((iVar2 == 0) || (DAT_100bfd98[iVar5] == 0)) || (3 < DAT_1009c6a8)) {
           DAT_100bfd98[iVar5] = 0;
         }

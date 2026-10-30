@@ -9,13 +9,13 @@ extern void *DAT_100a41ec;
 extern char s_debug_log_100a41f0[];
 extern char DAT_100a4344[];
 
-void __cdecl FUN_10007218(char *param_1)
+void __cdecl FUN_10007218(char *str)
 {
     if (DAT_100a41ec == (void *)0) {
         DAT_100a41ec = _fopen(s_debug_log_100a41f0, DAT_100a4344);
     }
     if (DAT_100a41ec != (void *)0) {
-        _fputs(param_1, DAT_100a41ec);
+        _fputs(str, DAT_100a41ec);
         _fflush(DAT_100a41ec);
         _fclose(DAT_100a41ec);
         DAT_100a41ec = (void *)0;

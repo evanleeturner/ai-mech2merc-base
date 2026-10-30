@@ -3,11 +3,11 @@
 /* mw2shell 1005e020: Ghidra's C, repaired by tools/ghidra_repair.py */
 extern undefined4 DAT_100986b4;
 extern undefined4 PTR_DAT_1009860c;
-ushort * __cdecl FUN_100425b0(int param_1, uint param_2, int * param_3);
+ushort * __cdecl FUN_100425b0(int param_1, uint str2, int * param_3);
 int __cdecl __strcmpi(char * _Str1, char * _Str2);
-undefined __cdecl FUN_10042590(int param_1, int * param_2);
+undefined __cdecl FUN_10042590(int param_1, int * str2);
 
-int __cdecl FUN_1005e020(uint param_1, char * param_2)
+int __cdecl FUN_1005e020(uint param_1, char * str2)
 
 {
   ushort *puVar1;
@@ -31,7 +31,7 @@ int __cdecl FUN_1005e020(uint param_1, char * param_2)
     iVar4 = 0;
     if (0 < (short)puVar1[4]) {
       do {
-        iVar2 = __strcmpi(local_c,param_2);
+        iVar2 = __strcmpi(local_c,str2);
         if (iVar2 == 0) break;
         puVar5 = puVar5 + 6;
         iVar4 = iVar4 + 1;
@@ -43,7 +43,7 @@ int __cdecl FUN_1005e020(uint param_1, char * param_2)
         } while (iVar3 < 10);
       } while (iVar4 < (short)puVar1[4]);
     }
-    iVar4 = __strcmpi(local_c,param_2);
+    iVar4 = __strcmpi(local_c,str2);
     if (iVar4 == 0) {
       local_10 = (int)(short)puVar5[5];
     }

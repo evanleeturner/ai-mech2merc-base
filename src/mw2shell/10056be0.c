@@ -3,7 +3,7 @@
 extern void _rand(void);
 extern long long __ftol(void);
 
-long long __stdcall FUN_10056be0(void)
+long long __stdcall RollRandomNumber_Likely(void)
 {
     long long lVar1;
     

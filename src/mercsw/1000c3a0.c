@@ -3,7 +3,7 @@
 /* mercsw 1000c3a0: Ghidra's C, repaired by tools/ghidra_repair.py */
 extern undefined4 DAT_100a7558;
 extern undefined4 DAT_100aae80;
-extern undefined4 DAT_100aafbc;
+extern undefined4 g_disabled100aafbc_Likely;
 extern undefined4 DAT_100b0a08;
 extern undefined4 DAT_100b352c;
 undefined __cdecl FUN_1003eb9c(int * param_1, int param_2, uint * param_3);
@@ -23,7 +23,7 @@ void __cdecl FUN_1000c3a0(int * param_1, byte * param_2, short param_3, short pa
   
   (void)local_218;
   (void)local_c;
-  if (DAT_100aafbc == 0) {
+  if (g_disabled100aafbc_Likely == 0) {
     local_214 = 0x651;
   }
   else {

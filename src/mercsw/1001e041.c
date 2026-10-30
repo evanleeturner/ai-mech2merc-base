@@ -4,7 +4,7 @@
 enum { false = 0, true = 1 };
 int __cdecl __read(int _FileHandle, void * _DstBuf, uint _MaxCharCount);
 
-uint __cdecl FUN_1001e041(int param_1, void * param_2, uint param_3)
+uint __cdecl FUN_1001e041(int fileHandle, void * param_2, uint param_3)
 
 {
   uint _MaxCharCount;
@@ -22,7 +22,7 @@ uint __cdecl FUN_1001e041(int param_1, void * param_2, uint param_3)
     if (0x3fff < local_c) {
       _MaxCharCount = 0x4000;
     }
-    uVar1 = __read(param_1,local_8,_MaxCharCount);
+    uVar1 = __read(fileHandle,local_8,_MaxCharCount);
     if (uVar1 != _MaxCharCount) break;
     local_c = local_c - _MaxCharCount;
     local_8 = (void *)((int)local_8 + _MaxCharCount);

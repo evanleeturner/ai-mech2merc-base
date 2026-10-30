@@ -2,7 +2,7 @@
 /* mw2shell 10010820 */
 void __stdcall _AIL_waveOutClose_4(int hwo);
 
-void __fastcall FUN_10010820(int param_1)
+void __fastcall CloseWaveOutDriver(int param_1)
 {
     int local_val;
     int zero = 0;

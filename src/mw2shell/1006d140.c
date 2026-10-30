@@ -9,7 +9,7 @@ extern int * DAT_100aa6e0;
 extern int * DAT_100aa6e4;
 undefined4 __cdecl FUN_10018060(int param_1, int param_2);
 undefined __cdecl FUN_10017ec0(int param_1, int param_2, char param_3);
-undefined4 __cdecl FUN_10017df0(int * param_1, undefined4 param_2);
+undefined4 __cdecl AppendToCollection(int * param_1, undefined4 param_2);
 undefined __cdecl FUN_100180f0(int * param_1, char param_2);
 
 void __stdcall FUN_1006d140(void)
@@ -23,7 +23,7 @@ void __stdcall FUN_1006d140(void)
   while (0 < iVar1) {
     iVar1 = FUN_10018060((int)DAT_100aa6e0,0);
     FUN_10017ec0((int)DAT_100aa6e0,iVar1,'\0');
-    FUN_10017df0(DAT_100a67b4,iVar1);
+    AppendToCollection(DAT_100a67b4,iVar1);
     iVar1 = DAT_100aa6e0[1];
   }
   FUN_100180f0(DAT_100aa6e0,'\0');
@@ -31,7 +31,7 @@ void __stdcall FUN_1006d140(void)
   while (0 < iVar1) {
     iVar1 = FUN_10018060((int)DAT_100aa6e4,0);
     FUN_10017ec0((int)DAT_100aa6e4,iVar1,'\0');
-    FUN_10017df0(DAT_100a67b8,iVar1);
+    AppendToCollection(DAT_100a67b8,iVar1);
     iVar1 = DAT_100aa6e4[1];
   }
   FUN_100180f0(DAT_100aa6e4,'\0');

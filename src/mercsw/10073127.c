@@ -8,16 +8,16 @@ undefined4 __stdcall FUN_1005d8e0(void);
 int __cdecl FUN_1005db1f(int param_1);
 char * __cdecl _strchr(char * _Str, int _Val);
 int __cdecl _sscanf(char * _Src, char * _Format, ...);
-int __cdecl FUN_1007b9d2(uint param_1, char * param_2);
+int __cdecl FUN_1007b9d2(uint param_1, char * str);
 int __cdecl _atoi(char * _Str);
 int __cdecl FUN_10032c10(int param_1);
 undefined4 __cdecl FUN_1000c8ee(int param_1);
 undefined * __cdecl FUN_1000c9e3(int param_1);
-undefined __cdecl FUN_10003c3e(int param_1);
+undefined __cdecl StopAndReleaseSoundSample(int param_1);
 undefined4 __cdecl FUN_1001d5cb(int param_1);
 undefined __cdecl FUN_1000393d(int * param_1);
 
-undefined4 __cdecl FUN_10073127(int param_1, char * param_2)
+undefined4 __cdecl FUN_10073127(int param_1, char * str)
 
 {
   undefined *puVar1;
@@ -40,7 +40,7 @@ undefined4 __cdecl FUN_10073127(int param_1, char * param_2)
     local_c[1] = -1;
     local_c[2] = 0;
     local_c[6] = 1;
-    local_8 = _strchr(param_2,0x3b);
+    local_8 = _strchr(str,0x3b);
     if (local_8 != (char *)0x0) {
       *local_8 = '\0';
       local_8 = local_8 + 1;
@@ -49,7 +49,7 @@ undefined4 __cdecl FUN_10073127(int param_1, char * param_2)
     }
     iVar2 = FUN_1007b9d2(10,local_7c);
     *(short *)(local_c + 7) = (short)iVar2;
-    local_14 = _atoi(param_2);
+    local_14 = _atoi(str);
     local_14 = FUN_10032c10(local_14);
     local_10 = FUN_1000c8ee(local_14);
     if (local_10 == -1) {
@@ -66,11 +66,11 @@ undefined4 __cdecl FUN_10073127(int param_1, char * param_2)
       return 0;
     }
     if ((local_c[3] == 0) || (local_c[5] == 0)) {
-      FUN_10003c3e((int)local_c);
+      StopAndReleaseSoundSample((int)local_c);
       return 0;
     }
     if (*(int *)local_c[3] == 0) {
-      FUN_10003c3e((int)local_c);
+      StopAndReleaseSoundSample((int)local_c);
       return 0;
     }
     iVar2 = FUN_1001d5cb(*(int *)local_c[3]);
@@ -84,7 +84,7 @@ undefined4 __cdecl FUN_10073127(int param_1, char * param_2)
     if (local_c == (int *)0x0) {
       return 1;
     }
-    FUN_10003c3e((int)local_c);
+    StopAndReleaseSoundSample((int)local_c);
   }
   return 1;
 }

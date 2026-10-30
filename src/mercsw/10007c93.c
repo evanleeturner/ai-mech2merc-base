@@ -6,7 +6,7 @@ extern undefined4 * DAT_100a5534;
 extern undefined4 DAT_100a5538;
 extern undefined4 DAT_100a553c;
 undefined4 __stdcall _AIL_end_sample_4(undefined4);
-undefined4 __cdecl FUN_10007dc0(undefined4 * param_1);
+undefined4 __cdecl RemoveBettyQueueEntry(undefined4 * param_1);
 
 void __cdecl FUN_10007c93(int param_1)
 
@@ -21,7 +21,7 @@ void __cdecl FUN_10007c93(int param_1)
       if (DAT_100a5538 != 0) {
         _AIL_end_sample_4(DAT_100a5538);
       }
-      DAT_100a5534 = (undefined4 *)FUN_10007dc0(DAT_100a5534);
+      DAT_100a5534 = (undefined4 *)RemoveBettyQueueEntry(DAT_100a5534);
       if (DAT_100a5534 == (undefined4 *)0x0) {
         return;
       }
@@ -35,7 +35,7 @@ void __cdecl FUN_10007c93(int param_1)
         bVar1 = false;
       }
       if (bVar1) {
-        uVar2 = FUN_10007dc0(local_10);
+        uVar2 = RemoveBettyQueueEntry(local_10);
         *(undefined4 *)((int)local_8 + 0x4f) = uVar2;
         local_10 = *(undefined4 **)((int)local_8 + 0x4f);
       }

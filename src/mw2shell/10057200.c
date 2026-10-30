@@ -7,9 +7,9 @@ extern undefined PTR_DAT_100a1cc0[];
 extern undefined PTR_DAT_100a1e20[];
 extern undefined PTR_DAT_100a1f60[];
 extern undefined PTR_DAT_100a2060[];
-longlong __stdcall FUN_10056be0(void);
+longlong __stdcall RollRandomNumber_Likely(void);
 
-undefined ** __cdecl FUN_10057200(int param_1, int * param_2)
+undefined ** __cdecl PickEntryFromFourTables_Likely(int param_1, int * param_2)
 
 {
   short sVar1;
@@ -22,9 +22,9 @@ undefined ** __cdecl FUN_10057200(int param_1, int * param_2)
   local_8 = (undefined **)0xa000b;
   if (param_1 < 0xbea) {
     sVar1 = (short)((param_1 + -0xbe4) / 2);
-    lVar4 = FUN_10056be0();
+    lVar4 = RollRandomNumber_Likely();
     if (0x2ed < (int)lVar4) {
-      lVar4 = FUN_10056be0();
+      lVar4 = RollRandomNumber_Likely();
       sVar1 = (short)lVar4;
     }
   }
@@ -44,7 +44,7 @@ undefined ** __cdecl FUN_10057200(int param_1, int * param_2)
   if (sVar1 == 3) {
     ppuVar3 = (undefined **)(PTR_DAT_100a2060);
   }
-  uVar5 = FUN_10056be0();
+  uVar5 = RollRandomNumber_Likely();
   iVar2 = (int)((longlong)((ulonglong)(uint)((int)uVar5 >> 0x1f) << 0x20 | (uVar5 & 0xffffffff)) / 10)
   ;
   *param_2 = iVar2;
