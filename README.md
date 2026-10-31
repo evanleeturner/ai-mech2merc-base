@@ -45,9 +45,10 @@ October: 2,018 in all, 1,468 from the game, 542 from the menus and 8
 from the launcher. Each is in its own file under `src/`, named by its
 address, with a short record under `provenance/` of which checks it
 passed and which tools made it. 117 of them have plain names so far:
-37 end in `_Likely`, and none yet ends in `_Guess`. The rest still
-carry the decompiler's stand-in names, `FUN_` and the address, until a
-later pass names them.
+37 end in `_Likely`, and none yet ends in `_Guess`. A list of every
+named function, with a link to its file, is in `src/README.md`. The
+rest still carry the decompiler's stand-in names, `FUN_` and the
+address, until a later pass names them.
 
 ## The legal side
 
